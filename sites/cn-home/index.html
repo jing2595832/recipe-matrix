@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中式家常菜 - 传承中华美食文化</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-cn-home">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🥢</span>
+                <h1>中式家常菜</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#recipes" class="nav-link">菜谱大全</a>
+                <a href="#categories" class="nav-link">菜系分类</a>
+                <a href="#about" class="nav-link">关于我们</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-search">🔍</button>
+                <button class="btn-login">登录/注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">传承千年味道，烹饪家的温暖</h2>
+                <p class="hero-subtitle">汇聚八大菜系精华，让每一道菜都承载着家的记忆</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="搜索菜谱：如红烧肉、麻婆豆腐..." class="search-input">
+                    <button class="btn-primary">搜索菜谱</button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">川菜</span>
+                    <span class="tag">粤菜</span>
+                    <span class="tag">鲁菜</span>
+                    <span class="tag">苏菜</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">八大菜系</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🌶️</div>
+                        <h4>川菜</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥟</div>
+                        <h4>粤菜</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍜</div>
+                        <h4>鲁菜</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🦐</div>
+                        <h4>苏菜</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥘</div>
+                        <h4>浙菜</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍲</div>
+                        <h4>闽菜</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">经典家常菜</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">加载更多菜谱</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">为什么选择我们</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📜</div>
+                        <h4>传统秘方</h4>
+                        <p>收录千年传承的经典菜谱，保留最正宗的做法</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h4>名厨指导</h4>
+                        <p>资深大厨视频教学，手把手教你做正宗中餐</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏠</div>
+                        <h4>家常易做</h4>
+                        <p>精选适合家庭制作的菜谱，食材易得步骤简单</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">❤️</div>
+                        <h4>家的味道</h4>
+                        <p>每一道菜都承载着家的温暖与记忆</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🥢</span>
+                    <h4>中式家常菜</h4>
+                    <p>传承中华美食文化，让每一餐都充满家的味道。我们致力于收集整理最正宗的中式家常菜做法。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>菜系分类</h5>
+                        <a href="#">川菜系列</a>
+                        <a href="#">粤菜系列</a>
+                        <a href="#">鲁菜系列</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>特色专题</h5>
+                        <a href="#">节日菜谱</a>
+                        <a href="#">家常小炒</a>
+                        <a href="#">汤羹煲类</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>关于我们</h5>
+                        <a href="#">联系方式</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">隐私政策</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 中式家常菜 - 传承中华美食文化</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

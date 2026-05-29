@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝宝辅食乐园 - 健康营养每一天</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-kid-nutrition">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🍼</span>
+                <h1>宝宝辅食乐园</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#recipes" class="nav-link">辅食食谱</a>
+                <a href="#categories" class="nav-link">月龄分类</a>
+                <a href="#about" class="nav-link">育儿知识</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-search">🔍</button>
+                <button class="btn-login">妈妈登录</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">给宝宝最好的营养开始</h2>
+                <p class="hero-subtitle">科学搭配每一餐，陪伴宝宝健康成长每一天</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="搜索辅食：如南瓜泥、蛋黄粥..." class="search-input">
+                    <button class="btn-primary">搜索食谱</button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">6-8个月</span>
+                    <span class="tag">9-12个月</span>
+                    <span class="tag">1-2岁</span>
+                    <span class="tag">2岁以上</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">按月龄选择辅食</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🥄</div>
+                        <h4>初添辅食期</h4>
+                        <p>6-8个月</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍎</div>
+                        <h4>咀嚼练习期</h4>
+                        <p>9-12个月</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥣</div>
+                        <h4>自主进食期</h4>
+                        <p>1-2岁</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍱</div>
+                        <h4>家庭共餐期</h4>
+                        <p>2岁以上</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥕</div>
+                        <h4>蔬菜泥糊</h4>
+                        <p>营养均衡</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🐟</div>
+                        <h4>肉鱼蛋奶</h4>
+                        <p>优质蛋白</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">热门辅食推荐</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">查看更多辅食</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">为什么选择我们</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">👩‍⚕️</div>
+                        <h4>营养专家审核</h4>
+                        <p>每道食谱都经过专业营养师审核，确保营养均衡</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📅</div>
+                        <h4>月龄精准匹配</h4>
+                        <p>根据宝宝月龄科学推荐，循序渐进添加辅食</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🥗</div>
+                        <h4>食材安全放心</h4>
+                        <p>严选天然食材，无添加剂，给宝宝最纯净的味道</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📖</div>
+                        <h4>详细制作步骤</h4>
+                        <p>图文详解每道辅食，新手妈妈也能轻松上手</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🍼</span>
+                    <h4>宝宝辅食乐园</h4>
+                    <p>专注宝宝辅食营养，陪伴每一个宝宝健康成长。让每一餐都充满爱与营养。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>月龄分类</h5>
+                        <a href="#">6-8个月</a>
+                        <a href="#">9-12个月</a>
+                        <a href="#">1-2岁</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>辅食类型</h5>
+                        <a href="#">蔬菜泥糊</a>
+                        <a href="#">肉泥鱼泥</a>
+                        <a href="#">粥面主食</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>帮助中心</h5>
+                        <a href="#">育儿知识</a>
+                        <a href="#">常见问题</a>
+                        <a href="#">联系我们</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 宝宝辅食乐园 - 给宝宝最好的营养开始</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

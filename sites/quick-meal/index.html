@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懒人快手餐 - 10分钟搞定美味</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-quick-meal">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <h1>懒人快手餐</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#recipes" class="nav-link">快手菜谱</a>
+                <a href="#categories" class="nav-link">时间分类</a>
+                <a href="#about" class="nav-link">懒人技巧</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-search">🔍</button>
+                <button class="btn-login">快速登录</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">没时间？没问题！10分钟搞定美味</h2>
+                <p class="hero-subtitle">专为忙碌的你设计，简单食材+简单步骤=美味一餐</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="搜快手菜：如蛋炒饭、泡面神仙吃法..." class="search-input">
+                    <button class="btn-primary">马上开做</button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">5分钟搞定</span>
+                    <span class="tag">10分钟上桌</span>
+                    <span class="tag">微波炉料理</span>
+                    <span class="tag">一锅出</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">按时间选菜谱</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">⏱️</div>
+                        <h4>5分钟快手</h4>
+                        <p>闪电速度</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">⚡</div>
+                        <h4>10分钟速食</h4>
+                        <p>上班族首选</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍳</div>
+                        <h4>15分钟简餐</h4>
+                        <p>轻松搞定</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥘</div>
+                        <h4>一锅料理</h4>
+                        <p>少洗碗</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📱</div>
+                        <h4>微波炉菜</h4>
+                        <p>懒人神器</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥗</div>
+                        <h4>免开火</h4>
+                        <p>凉拌即食</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">热门快手菜</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">查看更多快手菜</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">为什么选择懒人快手餐</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⏰</div>
+                        <h4>省时省力</h4>
+                        <p>每道菜控制在15分钟内，让你多睡半小时</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛒</div>
+                        <h4>食材简单</h4>
+                        <p>超市常见食材，不用特意采购，冰箱有啥做啥</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🍽️</div>
+                        <h4>少洗碗</h4>
+                        <p>一锅出、免开火，吃完只需洗一个碗</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">😋</div>
+                        <h4>美味不打折</h4>
+                        <p>简单不等于随便，每道菜都好吃到舔盘</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <h4>懒人快手餐</h4>
+                    <p>为忙碌的现代人打造的最实用菜谱平台。不用复杂技巧，不用昂贵食材，轻松搞定每一餐。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>时间分类</h5>
+                        <a href="#">5分钟菜谱</a>
+                        <a href="#">10分钟菜谱</a>
+                        <a href="#">15分钟菜谱</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>烹饪方式</h5>
+                        <a href="#">微波炉料理</a>
+                        <a href="#">一锅出</a>
+                        <a href="#">免开火</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>关于我们</h5>
+                        <a href="#">懒人技巧</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">投稿菜谱</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 懒人快手餐 - 10分钟搞定美味</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
