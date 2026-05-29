@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能每日配餐 - Smart Meal Planner</title>
+  <meta name="description" content="根据人数智能推荐菜品，解决每天不知道吃什么的烦恼">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 全局导航 -->
+  <nav class="global-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">🍽️ 智能配餐</a>
+      <ul class="nav-links" id="navLinks">
+        <!-- 动态生成 -->
+      </ul>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- 主内容区 -->
+  <main class="main-container">
+    <!-- 标题区 -->
+    <header class="hero-section">
+      <h1 class="hero-title">智能每日配餐</h1>
+      <p class="hero-subtitle">不知道今天吃什么？输入人数，一键生成完美菜单</p>
+      <p class="hero-subtitle-en">Smart Meal Planner - Just tell us how many people</p>
+    </header>
+
+    <!-- 人数选择区 -->
+    <section class="input-section">
+      <div class="input-card">
+        <h2 class="section-title">👥 选择用餐人数</h2>
+        <div class="input-group">
+          <div class="input-item">
+            <label for="adultNum">
+              <span class="label-icon">👨</span>
+              <span class="label-text">大人</span>
+              <span class="label-en">Adults</span>
+            </label>
+            <select id="adultNum" class="styled-select">
+              <option value="1">1 人</option>
+              <option value="2" selected>2 人</option>
+              <option value="3">3 人</option>
+              <option value="4">4 人</option>
+              <option value="5">5 人</option>
+              <option value="6">6 人</option>
+              <option value="7">7 人</option>
+              <option value="8">8+ 人</option>
+            </select>
+          </div>
+          
+          <div class="input-item">
+            <label for="childNum">
+              <span class="label-icon">👶</span>
+              <span class="label-text">小孩</span>
+              <span class="label-en">Kids</span>
+            </label>
+            <select id="childNum" class="styled-select">
+              <option value="0" selected>0 人</option>
+              <option value="1">1 人</option>
+              <option value="2">2 人</option>
+              <option value="3">3 人</option>
+              <option value="4">4+ 人</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="options-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="includeSpicy">
+            <span class="checkmark"></span>
+            <span>包含辣味菜</span>
+            <span class="label-en">Include spicy</span>
+          </label>
+        </div>
+
+        <button id="generateBtn" class="btn-primary">
+          <span class="btn-icon">✨</span>
+          <span>开始智能配餐</span>
+          <span class="btn-en">Generate Meals</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 推荐结果区 -->
+    <section class="result-section" id="resultSection" style="display: none;">
+      <div class="result-header">
+        <h2 class="section-title">🍽️ 为你推荐</h2>
+        <div class="meal-stats" id="mealStats">
+          <!-- 动态生成统计 -->
+        </div>
+      </div>
+
+      <div class="meal-container">
+        <!-- 热菜区 -->
+        <div class="meal-category">
+          <h3 class="category-title">
+            <span class="category-icon">🥘</span>
+            <span>热菜</span>
+            <span class="category-en">Main Dishes</span>
+          </h3>
+          <div class="recipe-grid" id="dishGrid">
+            <!-- 动态生成 -->
+          </div>
+        </div>
+
+        <!-- 汤品区 -->
+        <div class="meal-category">
+          <h3 class="category-title">
+            <span class="category-icon">🍲</span>
+            <span>汤品</span>
+            <span class="category-en">Soups</span>
+          </h3>
+          <div class="recipe-grid" id="soupGrid">
+            <!-- 动态生成 -->
+          </div>
+        </div>
+      </div>
+
+      <div class="action-buttons">
+        <button id="confirmBtn" class="btn-success">
+          <span class="btn-icon">✓</span>
+          <span>确认菜单</span>
+          <span class="btn-en">Confirm</span>
+        </button>
+        <button id="refreshBtn" class="btn-secondary">
+          <span class="btn-icon">🔄</span>
+          <span>换一批</span>
+          <span class="btn-en">Refresh</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 特色介绍区 -->
+    <section class="features-section">
+      <h2 class="section-title">🌟 更多精选站点</h2>
+      <div class="features-grid">
+        <a href="../cn-home/index.html" class="feature-card chinese">
+          <div class="feature-icon">🥢</div>
+          <h3>中式家常菜</h3>
+          <p>川粤湘苏，地道中国味</p>
+        </a>
+        <a href="../us-family/index.html" class="feature-card american">
+          <div class="feature-icon">🍔</div>
+          <h3>美式家庭餐</h3>
+          <p>西餐经典，烤箱快手</p>
+        </a>
+        <a href="../kid-nutrition/index.html" class="feature-card kids">
+          <div class="feature-icon">🍼</div>
+          <h3>儿童辅食营养</h3>
+          <p>低盐软烂，宝贝爱吃</p>
+        </a>
+        <a href="../fitness-diet/index.html" class="feature-card fitness">
+          <div class="feature-icon">💪</div>
+          <h3>减脂健康餐</h3>
+          <p>高蛋白低卡，健身必备</p>
+        </a>
+        <a href="../quick-meal/index.html" class="feature-card quick">
+          <div class="feature-icon">⚡</div>
+          <h3>懒人快手餐</h3>
+          <p>10分钟上桌，零厨艺</p>
+        </a>
+        <a href="../party-feast/index.html" class="feature-card party">
+          <div class="feature-icon">🎉</div>
+          <h3>宴席派对餐</h3>
+          <p>聚会硬菜，有面子</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p>🍽️ 智能菜谱网站矩阵 - 让每一餐都完美</p>
+      <p class="footer-links">
+        <a href="https://github.com/yourusername/recipe-matrix" target="_blank">GitHub</a>
+        <span class="divider">|</span>
+        <a href="#" id="sponsorLink">支持我们 ❤️</a>
+      </p>
+      <p class="copyright">© 2026 Recipe Matrix. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 菜谱详情弹窗 -->
+  <div class="modal" id="recipeModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- 动态生成 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入全局脚本 -->
+  <script src="../../public/data.js"></script>
+  <script src="../../common/global.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

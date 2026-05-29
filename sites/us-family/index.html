@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>American Family Meals - Simple & Delicious Home Cooking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-us-family">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🏠</span>
+                <h1>Family Meals</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#recipes" class="nav-link">Recipes</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-search">🔍</button>
+                <button class="btn-login">Sign In</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">Simple Meals for Busy Families</h2>
+                <p class="hero-subtitle">Easy, delicious recipes that bring everyone to the table</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="Search recipes: pasta, chicken, casserole..." class="search-input">
+                    <button class="btn-primary">Search</button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">Quick & Easy</span>
+                    <span class="tag">Comfort Food</span>
+                    <span class="tag">Kid-Friendly</span>
+                    <span class="tag">One-Pot</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">Browse by Category</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🍔</div>
+                        <h4>Burgers & Sandwiches</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍝</div>
+                        <h4>Pasta & Noodles</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍗</div>
+                        <h4>Chicken Dishes</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥩</div>
+                        <h4>Beef & Steak</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥗</div>
+                        <h4>Salads & Sides</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍰</div>
+                        <h4>Desserts</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">Popular Family Recipes</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">Load More Recipes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">Why Choose Us</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⏱️</div>
+                        <h4>Quick & Easy</h4>
+                        <p>Most recipes ready in 30 minutes or less, perfect for busy weeknights</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                        <h4>Family Tested</h4>
+                        <p>Every recipe tested and approved by real families with kids</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛒</div>
+                        <h4>Simple Ingredients</h4>
+                        <p>Easy-to-find ingredients available at any grocery store</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h4>Step-by-Step</h4>
+                        <p>Clear instructions with photos to guide you every step</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🏠</span>
+                    <h4>Family Meals</h4>
+                    <p>Making family dinner time simple, delicious, and memorable. Join thousands of families cooking together.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>Recipes</h5>
+                        <a href="#">Quick Dinners</a>
+                        <a href="#">Slow Cooker</a>
+                        <a href="#">Meal Prep</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>Resources</h5>
+                        <a href="#">Cooking Tips</a>
+                        <a href="#">Meal Planning</a>
+                        <a href="#">Shopping Lists</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>Company</h5>
+                        <a href="#">About Us</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 American Family Meals - Made with ❤️ for families everywhere</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
