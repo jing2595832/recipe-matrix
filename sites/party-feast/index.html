@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宴席派对餐 - 打造难忘的美食盛宴</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Feast Planner Styles - Dark / Luxury Theme ===== */
+        .feast-planner {
+            background: rgba(20, 15, 30, 0.92);
+            backdrop-filter: blur(14px);
+            border-radius: 16px;
+            padding: 28px 32px;
+            max-width: 560px;
+            margin: 24px auto 0;
+            box-shadow: 0 8px 40px rgba(180, 140, 60, 0.15);
+            border: 1px solid rgba(200, 160, 60, 0.25);
+        }
+        .planner-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .planner-row:last-of-type {
+            margin-bottom: 18px;
+        }
+        .planner-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #f0dca0;
+            min-width: 90px;
+            flex-shrink: 0;
+        }
+        .planner-label small {
+            display: block;
+            font-weight: 400;
+            color: #a08850;
+            font-size: 11px;
+        }
+        .planner-select {
+            flex: 1;
+            padding: 10px 14px;
+            border: 2px solid #4a3a20;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #f0dca0;
+            background: #1a1520;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .planner-select:focus {
+            border-color: #c8a030;
+        }
+        .planner-select option {
+            background: #1a1520;
+            color: #f0dca0;
+        }
+        .planner-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #f0dca0;
+        }
+        .planner-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #c8a030;
+            cursor: pointer;
+        }
+        .planner-checkbox small {
+            color: #a08850;
+            font-size: 11px;
+        }
+        .btn-feast-generate {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #c8a030, #a07820);
+            color: #1a1520;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(200, 160, 48, 0.3);
+            letter-spacing: 0.5px;
+        }
+        .btn-feast-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(200, 160, 48, 0.45);
+        }
+        .btn-feast-generate:active {
+            transform: translateY(0);
+        }
+
+        /* ===== Result Section ===== */
+        #resultSection {
+            padding: 40px 0;
+            background: linear-gradient(180deg, #1a1520 0%, #0e0a14 100%);
+        }
+        .result-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .result-header h3 {
+            font-size: 22px;
+            color: #f0dca0;
+            margin-bottom: 6px;
+        }
+        .result-header p {
+            color: #a08850;
+            font-size: 14px;
+        }
+        .result-course-label {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #c8a030;
+            margin: 24px 0 14px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(200, 160, 48, 0.2);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .result-course-label:first-of-type {
+            margin-top: 0;
+        }
+        .result-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 18px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .result-card {
+            background: linear-gradient(135deg, #241e30, #1a1520);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(200, 160, 48, 0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(200, 160, 48, 0.15);
+            border-color: rgba(200, 160, 48, 0.35);
+        }
+        .result-card-img {
+            font-size: 52px;
+            text-align: center;
+            padding: 22px 0 10px;
+            background: linear-gradient(135deg, #2a2238, #1e1828);
+        }
+        .result-card-body {
+            padding: 14px 18px 18px;
+        }
+        .result-card-body h4 {
+            font-size: 16px;
+            color: #f0dca0;
+            margin-bottom: 8px;
+        }
+        .result-card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: #a08850;
+            margin-bottom: 10px;
+        }
+        .result-card-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .btn-change {
+            flex: 1;
+            padding: 8px;
+            border: 2px solid #c8a030;
+            background: transparent;
+            color: #c8a030;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.15s, color 0.15s;
+        }
+        .btn-change:hover {
+            background: #c8a030;
+            color: #1a1520;
+        }
+        .btn-detail {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            background: #c8a030;
+            color: #1a1520;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .btn-detail:hover {
+            background: #b09020;
+        }
+
+        /* ===== Modal ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-box {
+            background: linear-gradient(135deg, #241e30, #1a1520);
+            border-radius: 18px;
+            max-width: 540px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(200, 160, 48, 0.2);
+            animation: modalIn 0.25s ease-out;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 24px 28px 16px;
+            border-bottom: 1px solid rgba(200, 160, 48, 0.15);
+        }
+        .modal-header .modal-emoji {
+            font-size: 42px;
+        }
+        .modal-header h3 {
+            font-size: 20px;
+            color: #f0dca0;
+        }
+        .modal-header .modal-meta {
+            font-size: 13px;
+            color: #a08850;
+            margin-top: 4px;
+        }
+        .modal-close {
+            margin-left: auto;
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: rgba(200, 160, 48, 0.1);
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            color: #a08850;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+        .modal-close:hover {
+            background: rgba(200, 160, 48, 0.2);
+        }
+        .modal-body {
+            padding: 20px 28px 28px;
+        }
+        .modal-section {
+            margin-bottom: 20px;
+        }
+        .modal-section:last-child {
+            margin-bottom: 0;
+        }
+        .modal-section h4 {
+            font-size: 15px;
+            color: #c8a030;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(200, 160, 48, 0.15);
+        }
+        .modal-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .modal-section ul li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #d0c090;
+            border-bottom: 1px dashed rgba(200, 160, 48, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-section ul li::before {
+            content: "•";
+            color: #c8a030;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1;
+        }
+        .modal-section ol {
+            padding-left: 0;
+            list-style: none;
+            counter-reset: step;
+        }
+        .modal-section ol li {
+            counter-increment: step;
+            padding: 8px 0 8px 36px;
+            font-size: 14px;
+            color: #d0c090;
+            position: relative;
+            border-bottom: 1px dashed rgba(200, 160, 48, 0.1);
+        }
+        .modal-section ol li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 24px;
+            height: 24px;
+            background: #c8a030;
+            color: #1a1520;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="theme-party-feast">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🎉</span>
+                <h1>宴席派对餐</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#recipes" class="nav-link">宴会菜谱</a>
+                <a href="#categories" class="nav-link">场合分类</a>
+                <a href="#about" class="nav-link">派对策划</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-login">VIP登录</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">让每一场聚会都成为难忘的盛宴</h2>
+                <p class="hero-subtitle">从家宴到派对，从节日到庆典，打造令人惊艳的美食体验</p>
+
+                <!-- Feast Planner -->
+                <div class="feast-planner">
+                    <div class="planner-row">
+                        <div class="planner-label">
+                            用餐人数
+                            <small>Guests</small>
+                        </div>
+                        <select class="planner-select" id="guestCount">
+                            <option value="4">4 人</option>
+                            <option value="6">6 人</option>
+                            <option value="8" selected>8 人</option>
+                            <option value="10">10 人</option>
+                            <option value="12">12 人</option>
+                            <option value="16">16 人</option>
+                            <option value="20">20 人</option>
+                        </select>
+                    </div>
+                    <div class="planner-row">
+                        <div class="planner-label">
+                            宴会类型
+                            <small>Occasion</small>
+                        </div>
+                        <select class="planner-select" id="occasionType">
+                            <option value="家宴">家宴 Family Dinner</option>
+                            <option value="生日派对">生日派对 Birthday Party</option>
+                            <option value="婚礼">婚礼 Wedding</option>
+                            <option value="商务宴请">商务宴请 Business Banquet</option>
+                            <option value="节日聚餐">节日聚餐 Holiday Feast</option>
+                        </select>
+                    </div>
+                    <div class="planner-row">
+                        <label class="planner-checkbox">
+                            <input type="checkbox" id="includeSeafood">
+                            <span>包含海鲜 <small>Include seafood</small></span>
+                        </label>
+                    </div>
+                    <button class="btn-feast-generate" id="btnGenerate">✨ 策划宴席 Plan Feast</button>
+                </div>
+
+                <div class="hero-tags">
+                    <span class="tag" data-filter="生日派对">生日派对</span>
+                    <span class="tag" data-filter="婚礼">婚礼宴席</span>
+                    <span class="tag" data-filter="节日聚餐">节日大餐</span>
+                    <span class="tag" data-filter="商务宴请">商务宴请</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section id="resultSection" style="display:none">
+            <div class="container">
+                <div class="result-header">
+                    <h3 id="resultTitle">为您策划的宴席菜单</h3>
+                    <p id="resultSubtitle">点击查看详细做法，或换一道试试</p>
+                </div>
+                <div id="resultCourses">
+                    <!-- Generated feast courses will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">按场合选择菜谱</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🎂</div>
+                        <h4>生日派对</h4>
+                        <p>甜蜜庆祝</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">💒</div>
+                        <h4>婚礼宴席</h4>
+                        <p>浪漫时刻</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎄</div>
+                        <h4>节日大餐</h4>
+                        <p>团圆美满</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥂</div>
+                        <h4>商务宴请</h4>
+                        <p>高端大气</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🎊</div>
+                        <h4>家庭聚会</h4>
+                        <p>温馨热闹</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🍾</div>
+                        <h4>周年庆典</h4>
+                        <p>纪念时刻</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">精选宴会菜谱</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">查看更多菜谱</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">为什么选择我们</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h4>名厨配方</h4>
+                        <p>每道菜谱都来自专业厨师，确保口味正宗、摆盘精美</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📋</div>
+                        <h4>完整菜单</h4>
+                        <p>提供从冷盘到甜品的完整宴会菜单搭配建议</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛒</div>
+                        <h4>采购清单</h4>
+                        <p>自动生成食材采购清单，按人数精准计算用量</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⏰</div>
+                        <h4>时间规划</h4>
+                        <p>详细的备餐时间表，让你从容应对大型宴会</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Detail Modal -->
+    <div class="modal-overlay" id="recipeModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span class="modal-emoji" id="modalEmoji"></span>
+                <div>
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta" id="modalMeta"></div>
+                </div>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4>🥬 食材 Ingredients</h4>
+                    <ul id="modalIngredients"></ul>
+                </div>
+                <div class="modal-section">
+                    <h4>👨‍🍳 步骤 Steps</h4>
+                    <ol id="modalSteps"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">🎉</span>
+                    <h4>宴席派对餐</h4>
+                    <p>专业的宴会菜谱平台，助你打造令人难忘的美食盛宴。无论是家庭聚会还是大型庆典，我们都能满足你的需求。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>宴会类型</h5>
+                        <a href="#">生日派对</a>
+                        <a href="#">婚礼宴席</a>
+                        <a href="#">节日大餐</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>菜谱分类</h5>
+                        <a href="#">冷盘开胃</a>
+                        <a href="#">主菜硬菜</a>
+                        <a href="#">甜品饮品</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>服务支持</h5>
+                        <a href="#">派对策划</a>
+                        <a href="#">联系我们</a>
+                        <a href="#">VIP服务</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 宴席派对餐 - 打造难忘的美食盛宴</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

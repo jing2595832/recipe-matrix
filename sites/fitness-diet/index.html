@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健身减脂餐 - 科学饮食塑造完美身材</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Meal Planner Styles - Dark/Fitness Theme ===== */
+        .input-card {
+            background: rgba(30, 30, 40, 0.95);
+            border-radius: 20px;
+            padding: 28px 32px;
+            max-width: 720px;
+            margin: 0 auto;
+            box-shadow: 0 8px 32px rgba(0, 200, 83, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: flex-end;
+            border: 1px solid rgba(0, 200, 83, 0.2);
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .input-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #00c853;
+            letter-spacing: 0.5px;
+        }
+
+        .styled-select {
+            padding: 10px 16px;
+            border: 2px solid rgba(0, 200, 83, 0.3);
+            border-radius: 12px;
+            font-size: 15px;
+            color: #ccc;
+            background: #1a1a2e;
+            cursor: pointer;
+            transition: border-color 0.3s;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2300c853' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 36px;
+        }
+
+        .styled-select:focus {
+            outline: none;
+            border-color: #00c853;
+            box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.15);
+        }
+
+        .styled-select option {
+            background: #1a1a2e;
+            color: #ccc;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 160px;
+            padding-bottom: 2px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #00c853;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 14px;
+            color: #aaa;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .btn-generate {
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #00c853, #00897b);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            white-space: nowrap;
+            min-width: 220px;
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 200, 83, 0.35);
+        }
+
+        .btn-generate:active {
+            transform: translateY(0);
+        }
+
+        /* ===== Result Section ===== */
+        .result-section {
+            max-width: 960px;
+            margin: 32px auto;
+            padding: 0 20px;
+        }
+
+        .meal-stats {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+            padding: 16px 24px;
+            background: rgba(30, 30, 40, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.15);
+        }
+
+        .meal-stats .stat-item {
+            text-align: center;
+        }
+
+        .meal-stats .stat-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #00c853;
+        }
+
+        .meal-stats .stat-label {
+            font-size: 12px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .result-section h3 {
+            text-align: center;
+            font-size: 18px;
+            color: #00c853;
+            margin: 20px 0 12px;
+            font-weight: 600;
+        }
+
+        .recipe-grid-result {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .recipe-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.25s, box-shadow 0.25s;
+            animation: fadeIn 0.4s ease-out;
+            border: 1px solid rgba(0, 200, 83, 0.1);
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0, 200, 83, 0.2);
+            border-color: rgba(0, 200, 83, 0.3);
+        }
+
+        .recipe-card .card-emoji {
+            font-size: 56px;
+            text-align: center;
+            padding: 20px 0 8px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+        }
+
+        .recipe-card .card-body {
+            padding: 14px 16px 16px;
+        }
+
+        .recipe-card .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #eee;
+            margin-bottom: 8px;
+        }
+
+        .recipe-card .card-meta {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .recipe-card .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .recipe-card .card-tag {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 8px;
+            background: rgba(0, 200, 83, 0.1);
+            color: #00c853;
+        }
+
+        .recipe-card .btn-change {
+            display: block;
+            width: calc(100% - 32px);
+            margin: 10px auto 0;
+            padding: 6px 0;
+            border: 1.5px dashed rgba(0, 200, 83, 0.3);
+            border-radius: 10px;
+            background: transparent;
+            color: #00c853;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .recipe-card .btn-change:hover {
+            background: rgba(0, 200, 83, 0.1);
+            border-color: #00c853;
+        }
+
+        /* ===== Action Buttons ===== */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .action-buttons .btn-confirm {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #00c853, #00897b);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .action-buttons .btn-confirm:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 200, 83, 0.35);
+        }
+
+        .action-buttons .btn-refresh {
+            padding: 12px 32px;
+            background: transparent;
+            color: #00c853;
+            border: 2px solid rgba(0, 200, 83, 0.3);
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .action-buttons .btn-refresh:hover {
+            transform: translateY(-2px);
+            border-color: #00c853;
+        }
+
+        /* ===== Modal ===== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: #1a1a2e;
+            border-radius: 20px;
+            max-width: 540px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 32px;
+            position: relative;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+            animation: fadeIn 0.3s ease-out;
+            border: 1px solid rgba(0, 200, 83, 0.15);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: rgba(0, 200, 83, 0.1);
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00c853;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover {
+            background: rgba(0, 200, 83, 0.2);
+        }
+
+        .modal-emoji {
+            font-size: 64px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .modal-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #eee;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .modal-meta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .modal-section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #00c853;
+            margin: 16px 0 8px;
+            padding-bottom: 4px;
+            border-bottom: 2px solid rgba(0, 200, 83, 0.15);
+        }
+
+        .modal-section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .modal-ingredients {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .modal-ingredients li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #ccc;
+            border-bottom: 1px dashed rgba(0, 200, 83, 0.1);
+        }
+
+        .modal-ingredients li:last-child {
+            border-bottom: none;
+        }
+
+        .modal-steps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: step-counter;
+        }
+
+        .modal-steps li {
+            padding: 10px 0 10px 40px;
+            font-size: 14px;
+            color: #ccc;
+            position: relative;
+            border-bottom: 1px dashed rgba(0, 200, 83, 0.1);
+        }
+
+        .modal-steps li:last-child {
+            border-bottom: none;
+        }
+
+        .modal-steps li::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 28px;
+            height: 28px;
+            background: linear-gradient(135deg, #00c853, #00897b);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .macro-info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 12px;
+            padding: 12px;
+            background: rgba(0, 200, 83, 0.05);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 200, 83, 0.1);
+        }
+
+        .macro-item {
+            text-align: center;
+        }
+
+        .macro-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00c853;
+        }
+
+        .macro-label {
+            font-size: 11px;
+            color: #888;
+        }
+
+        /* ===== Animation ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.4s ease-out;
+        }
+    </style>
+</head>
+<body class="theme-fitness-diet">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">💪</span>
+                <h1>健身减脂餐</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">首页</a>
+                <a href="#recipes" class="nav-link">减脂食谱</a>
+                <a href="#categories" class="nav-link">饮食计划</a>
+                <a href="#about" class="nav-link">健身知识</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-login">健身登录</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">七分吃三分练，科学减脂看得见</h2>
+                <p class="hero-subtitle">专业营养师定制食谱，让每一餐都为你的身材加分</p>
+                <div class="input-card">
+                    <div class="input-group">
+                        <label>🎯 健身目标选择 Fitness Goal</label>
+                        <select class="styled-select" id="goalSelect">
+                            <option value="减脂Cutting">减脂 Cutting</option>
+                            <option value="增肌Bulking">增肌 Bulking</option>
+                            <option value="维持Maintenance">维持 Maintenance</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>👥 用餐人数 People</label>
+                        <select class="styled-select" id="peopleCount">
+                            <option value="1">1人 (1 Person)</option>
+                            <option value="2">2人 (2 People)</option>
+                            <option value="3">3人 (3 People)</option>
+                            <option value="4">4人 (4 People)</option>
+                            <option value="5">5人 (5 People)</option>
+                            <option value="6">6人 (6 People)</option>
+                            <option value="7">7人 (7 People)</option>
+                            <option value="8">8人 (8 People)</option>
+                        </select>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="highProtein">
+                        <label for="highProtein">🥩 高蛋白模式<br><small>High Protein</small></label>
+                    </div>
+                    <button class="btn-generate" id="btnGenerate">✨ 智能健身餐<br><small>Generate Fitness Meal</small></button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">高蛋白</span>
+                    <span class="tag">低碳水</span>
+                    <span class="tag">生酮饮食</span>
+                    <span class="tag">增肌餐</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section" id="resultSection" style="display:none">
+            <div class="meal-stats" id="mealStats"></div>
+            <h3>🥗 主菜 Main Dishes</h3>
+            <div class="recipe-grid-result" id="dishGrid"></div>
+            <h3>🥤 加餐 / 饮品 Snacks & Drinks</h3>
+            <div class="recipe-grid-result" id="snackGrid"></div>
+            <div class="action-buttons">
+                <button class="btn-confirm" id="btnConfirm">✅ 确认菜单 Confirm Menu</button>
+                <button class="btn-refresh" id="btnRefresh">🔄 换一批 Refresh</button>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">饮食目标分类</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">🔥</div>
+                        <h4>燃脂减重</h4>
+                        <p>高效减脂</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">💪</div>
+                        <h4>增肌塑形</h4>
+                        <p>蛋白质满满</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">⚖️</div>
+                        <h4>维持体重</h4>
+                        <p>均衡营养</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥗</div>
+                        <h4>素食健身</h4>
+                        <p>植物蛋白</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">🥑</div>
+                        <h4>生酮饮食</h4>
+                        <p>低碳水高脂</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">⏰</div>
+                        <h4>间歇断食</h4>
+                        <p>科学断食</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">热门减脂食谱</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">加载更多食谱</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">为什么选择我们</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <h4>精准热量计算</h4>
+                        <p>每道食谱标注详细营养成分，热量、蛋白质、碳水一目了然</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎯</div>
+                        <h4>个性化方案</h4>
+                        <p>根据你的健身目标和身体状况，定制专属饮食计划</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">👨‍⚕️</div>
+                        <h4>专业团队</h4>
+                        <p>营养师与健身教练联合打造，科学有效不反弹</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h4>便捷记录</h4>
+                        <p>一键记录每日饮食，追踪你的减脂进度</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Recipe Detail Modal -->
+    <div class="modal-overlay" id="recipeModal">
+        <div class="modal-content" id="modalBody">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalInner"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">💪</span>
+                    <h4>健身减脂餐</h4>
+                    <p>科学饮食，健康减脂。我们致力于为健身爱好者提供最专业的营养餐单，助你达成理想身材。</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>饮食计划</h5>
+                        <a href="#">减脂计划</a>
+                        <a href="#">增肌计划</a>
+                        <a href="#">维持计划</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>营养知识</h5>
+                        <a href="#">宏量营养素</a>
+                        <a href="#">补剂指南</a>
+                        <a href="#">饮食误区</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>关于我们</h5>
+                        <a href="#">专业团队</a>
+                        <a href="#">联系方式</a>
+                        <a href="#">隐私政策</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 健身减脂餐 - 科学饮食塑造完美身材</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

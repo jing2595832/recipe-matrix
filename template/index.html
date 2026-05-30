@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SITE_NAME}} - {{SITE_TAGLINE}}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="{{THEME_CLASS}}">
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">{{LOGO_ICON}}</span>
+                <h1>{{SITE_NAME}}</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link">{{NAV_HOME}}</a>
+                <a href="#recipes" class="nav-link">{{NAV_RECIPES}}</a>
+                <a href="#categories" class="nav-link">{{NAV_CATEGORIES}}</a>
+                <a href="#about" class="nav-link">{{NAV_ABOUT}}</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-search">{{ICON_SEARCH}}</button>
+                <button class="btn-login">{{NAV_LOGIN}}</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2 class="hero-title">{{HERO_TITLE}}</h2>
+                <p class="hero-subtitle">{{HERO_SUBTITLE}}</p>
+                <div class="hero-search">
+                    <input type="text" placeholder="{{SEARCH_PLACEHOLDER}}" class="search-input">
+                    <button class="btn-primary">{{SEARCH_BUTTON}}</button>
+                </div>
+                <div class="hero-tags">
+                    <span class="tag">{{TAG_1}}</span>
+                    <span class="tag">{{TAG_2}}</span>
+                    <span class="tag">{{TAG_3}}</span>
+                    <span class="tag">{{TAG_4}}</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories" id="categories">
+            <div class="container">
+                <h3 class="section-title">{{CATEGORIES_TITLE}}</h3>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">{{CAT_ICON_1}}</div>
+                        <h4>{{CAT_NAME_1}}</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">{{CAT_ICON_2}}</div>
+                        <h4>{{CAT_NAME_2}}</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">{{CAT_ICON_3}}</div>
+                        <h4>{{CAT_NAME_3}}</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">{{CAT_ICON_4}}</div>
+                        <h4>{{CAT_NAME_4}}</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">{{CAT_ICON_5}}</div>
+                        <h4>{{CAT_NAME_5}}</h4>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">{{CAT_ICON_6}}</div>
+                        <h4>{{CAT_NAME_6}}</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="recipes" id="recipes">
+            <div class="container">
+                <h3 class="section-title">{{RECIPES_TITLE}}</h3>
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Recipes will be loaded by JavaScript -->
+                </div>
+                <div class="load-more">
+                    <button class="btn-secondary" id="loadMore">{{LOAD_MORE}}</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h3 class="section-title">{{FEATURES_TITLE}}</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">{{FEATURE_ICON_1}}</div>
+                        <h4>{{FEATURE_TITLE_1}}</h4>
+                        <p>{{FEATURE_DESC_1}}</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">{{FEATURE_ICON_2}}</div>
+                        <h4>{{FEATURE_TITLE_2}}</h4>
+                        <p>{{FEATURE_DESC_2}}</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">{{FEATURE_ICON_3}}</div>
+                        <h4>{{FEATURE_TITLE_3}}</h4>
+                        <p>{{FEATURE_DESC_3}}</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">{{FEATURE_ICON_4}}</div>
+                        <h4>{{FEATURE_TITLE_4}}</h4>
+                        <p>{{FEATURE_DESC_4}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">{{LOGO_ICON}}</span>
+                    <h4>{{SITE_NAME}}</h4>
+                    <p>{{FOOTER_DESC}}</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h5>{{FOOTER_LINKS_1_TITLE}}</h5>
+                        <a href="#">{{FOOTER_LINK_1_1}}</a>
+                        <a href="#">{{FOOTER_LINK_1_2}}</a>
+                        <a href="#">{{FOOTER_LINK_1_3}}</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>{{FOOTER_LINKS_2_TITLE}}</h5>
+                        <a href="#">{{FOOTER_LINK_2_1}}</a>
+                        <a href="#">{{FOOTER_LINK_2_2}}</a>
+                        <a href="#">{{FOOTER_LINK_2_3}}</a>
+                    </div>
+                    <div class="link-group">
+                        <h5>{{FOOTER_LINKS_3_TITLE}}</h5>
+                        <a href="#">{{FOOTER_LINK_3_1}}</a>
+                        <a href="#">{{FOOTER_LINK_3_2}}</a>
+                        <a href="#">{{FOOTER_LINK_3_3}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>{{COPYRIGHT}}</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
