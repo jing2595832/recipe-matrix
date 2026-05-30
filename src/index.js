@@ -20,11 +20,144 @@ export default {
                 return new Response(JSON.stringify({
                     status: 'ok',
                     message: 'Recipe Stats API',
-                    version: '1.0.0'
+                    version: '2.0.0'
                 }), {
                     headers: { 'Content-Type': 'application/json', ...corsHeaders }
                 });
             }
+
+            // ===== 排行榜与仪表盘 API =====
+
+            // 仪表盘总览数据
+            if (path === '/api/dashboard' && request.method === 'GET') {
+                const siteId = url.searchParams.get('site_id') || 'main';
+                
+                // 总浏览量、总配餐次数
+                const totalStats = await env.DB.prepare(
+                    'SELECT SUM(views) as total_views, SUM(meals) as total_meals FROM site_daily_stats'
+                ).first();
+
+                // 当前站点统计
+                const siteStats = await env.DB.prepare(
+                    'SELECT SUM(views) as site_views, SUM(meals) as site_meals FROM site_daily_stats WHERE site_id = ?'
+                ).bind(siteId).first();
+
+                // 今日统计
+                const todayStats = await env.DB.prepare(
+                    'SELECT SUM(views) as today_views, SUM(meals) as today_meals FROM site_daily_stats WHERE date = date("now")'
+                ).first();
+
+                // 今日站点统计
+                const todaySiteStats = await env.DB.prepare(
+                    'SELECT COALESCE(SUM(views),0) as today_views, COALESCE(SUM(meals),0) as today_meals FROM site_daily_stats WHERE site_id = ? AND date = date("now")'
+                ).bind(siteId).first();
+
+                // 各站点统计
+                const allSiteStats = await env.DB.prepare(
+                    'SELECT site_id, SUM(views) as total_views, SUM(meals) as total_meals FROM site_daily_stats GROUP BY site_id ORDER BY total_views DESC'
+                ).all();
+
+                // 注册用户数
+                const userCount = await env.DB.prepare('SELECT COUNT(*) as count FROM users').first();
+
+                return new Response(JSON.stringify({
+                    total_views: totalStats?.total_views || 0,
+                    total_meals: totalStats?.total_meals || 0,
+                    site_views: siteStats?.site_views || 0,
+                    site_meals: siteStats?.site_meals || 0,
+                    today_views: todayStats?.today_views || 0,
+                    today_meals: todayStats?.today_meals || 0,
+                    today_site_views: todaySiteStats?.today_views || 0,
+                    today_site_meals: todaySiteStats?.today_meals || 0,
+                    user_count: userCount?.count || 0,
+                    sites: allSiteStats?.results || []
+                }), {
+                    headers: { 'Content-Type': 'application/json', ...corsHeaders }
+                });
+            }
+
+            // 受欢迎菜品排行榜 TOP N
+            if (path === '/api/top-recipes' && request.method === 'GET') {
+                const limit = Math.min(parseInt(url.searchParams.get('limit')) || 20, 50);
+                const siteId = url.searchParams.get('site_id');
+
+                let query = 'SELECT recipe_id, recipe_name, SUM(count) as total_views FROM (';
+                query += 'SELECT recipe_id, recipe_name, COUNT(*) as count FROM recipe_views';
+                if (siteId) {
+                    query += ' WHERE site_id = ?';
+                }
+                query += ' GROUP BY recipe_id, recipe_name';
+                query += ' UNION ALL ';
+                query += 'SELECT recipe_id, NULL as recipe_name, views as count FROM recipe_stats';
+                query += ') combined GROUP BY recipe_id ORDER BY total_views DESC LIMIT ?';
+
+                const bindings = siteId ? [siteId, limit] : [limit];
+                const results = await env.DB.prepare(query).bind(...bindings).all();
+
+                return new Response(JSON.stringify({
+                    recipes: results?.results || [],
+                    count: results?.results?.length || 0
+                }), {
+                    headers: { 'Content-Type': 'application/json', ...corsHeaders }
+                });
+            }
+
+            // 受欢迎菜单/配餐排行榜 TOP N（基于配餐中出现的菜品组合频率）
+            if (path === '/api/top-meals' && request.method === 'GET') {
+                const limit = Math.min(parseInt(url.searchParams.get('limit')) || 20, 50);
+                const siteId = url.searchParams.get('site_id');
+
+                // 获取最近的配餐记录，按日期和站点分组统计
+                let query = `SELECT site_id, date(created_at) as gen_date, COUNT(*) as gen_count 
+                    FROM meal_generations`;
+                if (siteId) {
+                    query += ' WHERE site_id = ?';
+                }
+                query += ' GROUP BY site_id, date(created_at) ORDER BY gen_count DESC LIMIT ?';
+
+                const bindings = siteId ? [siteId, limit] : [limit];
+                const results = await env.DB.prepare(query).bind(...bindings).all();
+
+                return new Response(JSON.stringify({
+                    meals: results?.results || [],
+                    count: results?.results?.length || 0
+                }), {
+                    headers: { 'Content-Type': 'application/json', ...corsHeaders }
+                });
+            }
+
+            // 站点列表（用于站间导航）
+            if (path === '/api/sites' && request.method === 'GET') {
+                const sites = [
+                    { id: 'main', name: '智能配餐总站', emoji: '🍽️', url: 'https://recipe-matrix.pages.dev' },
+                    { id: 'cn-home', name: '中式家常菜', emoji: '🥘', url: 'https://cn-home.recipe-matrix.pages.dev' },
+                    { id: 'us-family', name: '美式家庭餐', emoji: '🍔', url: 'https://us-family.recipe-matrix.pages.dev' },
+                    { id: 'kid-nutrition', name: '儿童营养餐', emoji: '🧒', url: 'https://kid-nutrition.recipe-matrix.pages.dev' },
+                    { id: 'fitness-diet', name: '减脂健康餐', emoji: '💪', url: 'https://fitness-diet.recipe-matrix.pages.dev' },
+                    { id: 'quick-meal', name: '懒人快手餐', emoji: '⚡', url: 'https://quick-meal.recipe-matrix.pages.dev' },
+                    { id: 'party-feast', name: '宴席派对餐', emoji: '🎉', url: 'https://party-feast.recipe-matrix.pages.dev' }
+                ];
+
+                // 附加每个站点的统计数据
+                const statsResults = await env.DB.prepare(
+                    'SELECT site_id, SUM(views) as total_views, SUM(meals) as total_meals FROM site_daily_stats GROUP BY site_id'
+                ).all();
+                const statsMap = {};
+                (statsResults?.results || []).forEach(row => {
+                    statsMap[row.site_id] = { views: row.total_views, meals: row.total_meals };
+                });
+
+                sites.forEach(site => {
+                    site.views = statsMap[site.id]?.views || 0;
+                    site.meals = statsMap[site.id]?.meals || 0;
+                });
+
+                return new Response(JSON.stringify({ sites }), {
+                    headers: { 'Content-Type': 'application/json', ...corsHeaders }
+                });
+            }
+
+            // ===== 原有 API =====
 
             // Track page view
             if (path === '/api/page-view' && request.method === 'POST') {
@@ -49,7 +182,7 @@ export default {
 
             // Track recipe view
             if (path === '/api/recipe-view' && request.method === 'POST') {
-                const { recipe_id, site_id, fingerprint } = await request.json();
+                const { recipe_id, recipe_name, site_id, fingerprint } = await request.json();
                 if (!recipe_id || !site_id || !fingerprint) {
                     return new Response(JSON.stringify({ error: 'Missing required fields' }), {
                         status: 400,
@@ -57,8 +190,8 @@ export default {
                     });
                 }
                 await env.DB.prepare(
-                    'INSERT INTO recipe_views (recipe_id, site_id, fingerprint, created_at) VALUES (?, ?, ?, datetime("now"))'
-                ).bind(recipe_id, site_id, fingerprint).run();
+                    'INSERT INTO recipe_views (recipe_id, recipe_name, site_id, fingerprint, created_at) VALUES (?, ?, ?, ?, datetime("now"))'
+                ).bind(recipe_id, recipe_name || recipe_id, site_id, fingerprint).run();
                 await env.DB.prepare(
                     'INSERT INTO recipe_stats (recipe_id, views) VALUES (?, 1) ON CONFLICT(recipe_id) DO UPDATE SET views = views + 1'
                 ).bind(recipe_id).run();
