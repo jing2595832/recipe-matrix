@@ -5,6 +5,323 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>懒人快手餐 - 10分钟搞定美味</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ===== Meal Planner Styles - Light Blue / Fresh Theme ===== */
+        .meal-planner {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            padding: 28px 32px;
+            max-width: 560px;
+            margin: 24px auto 0;
+            box-shadow: 0 8px 32px rgba(56, 152, 236, 0.12);
+            border: 1px solid rgba(56, 152, 236, 0.15);
+        }
+        .planner-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .planner-row:last-of-type {
+            margin-bottom: 18px;
+        }
+        .planner-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a3a5c;
+            min-width: 90px;
+            flex-shrink: 0;
+        }
+        .planner-label small {
+            display: block;
+            font-weight: 400;
+            color: #6b8db5;
+            font-size: 11px;
+        }
+        .planner-select {
+            flex: 1;
+            padding: 10px 14px;
+            border: 2px solid #d0e4f7;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #1a3a5c;
+            background: #f0f7ff;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .planner-select:focus {
+            border-color: #3898ec;
+        }
+        .planner-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #1a3a5c;
+        }
+        .planner-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #3898ec;
+            cursor: pointer;
+        }
+        .planner-checkbox small {
+            color: #6b8db5;
+            font-size: 11px;
+        }
+        .btn-generate {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #3898ec, #2b7dd4);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.2s;
+            box-shadow: 0 4px 16px rgba(56, 152, 236, 0.3);
+            letter-spacing: 0.5px;
+        }
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(56, 152, 236, 0.4);
+        }
+        .btn-generate:active {
+            transform: translateY(0);
+        }
+
+        /* ===== Result Section ===== */
+        #resultSection {
+            padding: 40px 0;
+            background: linear-gradient(180deg, #e8f4fd 0%, #fff 100%);
+        }
+        .result-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+        .result-header h3 {
+            font-size: 22px;
+            color: #1a3a5c;
+            margin-bottom: 6px;
+        }
+        .result-header p {
+            color: #6b8db5;
+            font-size: 14px;
+        }
+        .result-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .result-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(56, 152, 236, 0.1);
+            border: 1px solid rgba(56, 152, 236, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .result-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(56, 152, 236, 0.18);
+        }
+        .result-card-img {
+            font-size: 56px;
+            text-align: center;
+            padding: 24px 0 12px;
+            background: linear-gradient(135deg, #f0f7ff, #e0efff);
+        }
+        .result-card-body {
+            padding: 16px 20px 20px;
+        }
+        .result-card-body h4 {
+            font-size: 17px;
+            color: #1a3a5c;
+            margin-bottom: 8px;
+        }
+        .result-card-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 12px;
+            color: #6b8db5;
+            margin-bottom: 10px;
+        }
+        .result-card-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .btn-change {
+            flex: 1;
+            padding: 8px;
+            border: 2px solid #3898ec;
+            background: transparent;
+            color: #3898ec;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.15s, color 0.15s;
+        }
+        .btn-change:hover {
+            background: #3898ec;
+            color: #fff;
+        }
+        .btn-detail {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            background: #3898ec;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.15s;
+        }
+        .btn-detail:hover {
+            background: #2b7dd4;
+        }
+
+        /* ===== Modal ===== */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal-box {
+            background: #fff;
+            border-radius: 18px;
+            max-width: 520px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            animation: modalIn 0.25s ease-out;
+        }
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.96); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 24px 28px 16px;
+            border-bottom: 1px solid #e8f0f8;
+        }
+        .modal-header .modal-emoji {
+            font-size: 42px;
+        }
+        .modal-header h3 {
+            font-size: 20px;
+            color: #1a3a5c;
+        }
+        .modal-header .modal-meta {
+            font-size: 13px;
+            color: #6b8db5;
+            margin-top: 4px;
+        }
+        .modal-close {
+            margin-left: auto;
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: #f0f4f8;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            color: #6b8db5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.15s;
+        }
+        .modal-close:hover {
+            background: #e0e8f0;
+        }
+        .modal-body {
+            padding: 20px 28px 28px;
+        }
+        .modal-section {
+            margin-bottom: 20px;
+        }
+        .modal-section:last-child {
+            margin-bottom: 0;
+        }
+        .modal-section h4 {
+            font-size: 15px;
+            color: #3898ec;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #e8f4fd;
+        }
+        .modal-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .modal-section ul li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #3a5a7c;
+            border-bottom: 1px dashed #eef3f8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .modal-section ul li::before {
+            content: "•";
+            color: #3898ec;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 1;
+        }
+        .modal-section ol {
+            padding-left: 0;
+            list-style: none;
+            counter-reset: step;
+        }
+        .modal-section ol li {
+            counter-increment: step;
+            padding: 8px 0 8px 36px;
+            font-size: 14px;
+            color: #3a5a7c;
+            position: relative;
+            border-bottom: 1px dashed #eef3f8;
+        }
+        .modal-section ol li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 24px;
+            height: 24px;
+            background: #3898ec;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body class="theme-quick-meal">
     <header class="site-header">
@@ -20,7 +337,6 @@
                 <a href="#about" class="nav-link">懒人技巧</a>
             </nav>
             <div class="header-actions">
-                <button class="btn-search">🔍</button>
                 <button class="btn-login">快速登录</button>
             </div>
         </div>
@@ -32,15 +348,65 @@
             <div class="hero-content">
                 <h2 class="hero-title">没时间？没问题！10分钟搞定美味</h2>
                 <p class="hero-subtitle">专为忙碌的你设计，简单食材+简单步骤=美味一餐</p>
-                <div class="hero-search">
-                    <input type="text" placeholder="搜快手菜：如蛋炒饭、泡面神仙吃法..." class="search-input">
-                    <button class="btn-primary">马上开做</button>
+
+                <!-- Meal Planner -->
+                <div class="meal-planner">
+                    <div class="planner-row">
+                        <div class="planner-label">
+                            用餐人数
+                            <small>People</small>
+                        </div>
+                        <select class="planner-select" id="peopleCount">
+                            <option value="1">1 人</option>
+                            <option value="2" selected>2 人</option>
+                            <option value="3">3 人</option>
+                            <option value="4">4 人</option>
+                            <option value="5">5 人</option>
+                            <option value="6">6 人</option>
+                            <option value="7">7 人</option>
+                            <option value="8">8 人</option>
+                        </select>
+                    </div>
+                    <div class="planner-row">
+                        <div class="planner-label">
+                            可用时间
+                            <small>Time Available</small>
+                        </div>
+                        <select class="planner-select" id="timeAvailable">
+                            <option value="5">5分钟</option>
+                            <option value="10" selected>10分钟</option>
+                            <option value="15">15分钟</option>
+                            <option value="20">20分钟</option>
+                            <option value="30">30分钟</option>
+                        </select>
+                    </div>
+                    <div class="planner-row">
+                        <label class="planner-checkbox">
+                            <input type="checkbox" id="microwaveOnly">
+                            <span>只用微波炉 <small>Microwave only</small></span>
+                        </label>
+                    </div>
+                    <button class="btn-generate" id="btnGenerate">✨ 快速搭配 Quick Generate</button>
                 </div>
+
                 <div class="hero-tags">
-                    <span class="tag">5分钟搞定</span>
-                    <span class="tag">10分钟上桌</span>
-                    <span class="tag">微波炉料理</span>
-                    <span class="tag">一锅出</span>
+                    <span class="tag" data-filter="5分钟">5分钟搞定</span>
+                    <span class="tag" data-filter="10分钟">10分钟上桌</span>
+                    <span class="tag" data-filter="微波炉">微波炉料理</span>
+                    <span class="tag" data-filter="一锅出">一锅出</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section id="resultSection" style="display:none">
+            <div class="container">
+                <div class="result-header">
+                    <h3 id="resultTitle">为你搭配的快手餐</h3>
+                    <p id="resultSubtitle">点击查看详细做法，或换一道试试</p>
+                </div>
+                <div class="result-cards" id="resultCards">
+                    <!-- Generated meal cards will appear here -->
                 </div>
             </div>
         </section>
@@ -127,6 +493,30 @@
         </section>
     </main>
 
+    <!-- Recipe Detail Modal -->
+    <div class="modal-overlay" id="recipeModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <span class="modal-emoji" id="modalEmoji"></span>
+                <div>
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta" id="modalMeta"></div>
+                </div>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h4>🥬 食材 Ingredients</h4>
+                    <ul id="modalIngredients"></ul>
+                </div>
+                <div class="modal-section">
+                    <h4>👨‍🍳 步骤 Steps</h4>
+                    <ol id="modalSteps"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
@@ -157,7 +547,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 懒人快手餐 - 10分钟搞定美味</p>
+                <p>&copy; 2024 懒人快手餐 - 10分钟搞定美味</p>
             </div>
         </div>
     </footer>
