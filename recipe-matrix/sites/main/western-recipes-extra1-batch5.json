@@ -1,0 +1,3041 @@
+[
+  {
+    "id": "west_451",
+    "name": "意式云吞",
+    "nameEn": "Cappelletti in Brodo",
+    "cuisine": "意式",
+    "category": "热菜",
+    "difficulty": "困难",
+    "prepTime": 60,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🥟",
+    "tags": [
+      "意式",
+      "手工意面",
+      "汤"
+    ],
+    "ingredients": [
+      {
+        "name": "意式饺子皮",
+        "amount": "400g"
+      },
+      {
+        "name": "鸡肉馅",
+        "amount": "200g"
+      },
+      {
+        "name": "帕尔马干酪",
+        "amount": "50g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "1个"
+      },
+      {
+        "name": "肉豆蔻粉",
+        "amount": "一小撮"
+      },
+      {
+        "name": "柠檬皮(碎)",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "鸡高汤",
+        "amount": "1.5L"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "白胡椒",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "砧板",
+      "擀面杖",
+      "小圆形模具",
+      "煮锅"
+    ],
+    "steps": [
+      "鸡肉馅、帕尔马干酪、鸡蛋、肉豆蔻粉和柠檬皮碎混合成馅料。",
+      "饺子皮切成小圆片，中间放馅料，对折成三角形，两端向内弯捏成帽子形。",
+      "鸡高汤煮沸，加盐调味。",
+      "放入云吞煮3-5分钟至浮起。",
+      "盛入碗中配热汤。",
+      "撒帕尔马干酪。"
+    ]
+  },
+  {
+    "id": "west_452",
+    "name": "意式蔬菜蛋饼(蘑菇)",
+    "nameEn": "Frittata ai Funghi",
+    "cuisine": "意式",
+    "category": "热菜",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🥚",
+    "tags": [
+      "意式",
+      "蛋饼",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "鸡蛋",
+        "amount": "8个"
+      },
+      {
+        "name": "混合蘑菇",
+        "amount": "250g"
+      },
+      {
+        "name": "大蒜",
+        "amount": "2瓣"
+      },
+      {
+        "name": "新鲜百里香",
+        "amount": "2枝"
+      },
+      {
+        "name": "帕尔马干酪",
+        "amount": "50g"
+      },
+      {
+        "name": "牛奶",
+        "amount": "2大勺"
+      },
+      {
+        "name": "特级初榨橄榄油",
+        "amount": "2大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "不粘平底锅",
+      "烤箱",
+      "砧板"
+    ],
+    "steps": [
+      "蘑菇切片。平底锅加油炒蘑菇5分钟至金黄，加大蒜和百里香炒30秒。",
+      "鸡蛋、牛奶、帕尔马干酪、盐和黑胡椒打散。",
+      "蘑菇倒入蛋液中拌匀。",
+      "不粘锅刷油，倒入蛋液，中小火煮3分钟至边缘凝固。",
+      "放入200°C烤箱烤10分钟至表面金黄。",
+      "放凉后切块。"
+    ]
+  },
+  {
+    "id": "west_453",
+    "name": "意式培根蛋面(变体)",
+    "nameEn": "Spaghetti alla Gricia",
+    "cuisine": "意式",
+    "category": "主食",
+    "difficulty": "中等",
+    "prepTime": 15,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍝",
+    "tags": [
+      "意式",
+      "意面",
+      "罗马"
+    ],
+    "ingredients": [
+      {
+        "name": "意面(细面)",
+        "amount": "400g"
+      },
+      {
+        "name": "烟熏猪脸肉(guanciale)",
+        "amount": "200g"
+      },
+      {
+        "name": "佩科里诺罗马诺干酪",
+        "amount": "80g"
+      },
+      {
+        "name": "黑胡椒(大量)",
+        "amount": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "大锅",
+      "平底锅",
+      "夹子"
+    ],
+    "steps": [
+      "大锅烧水煮面。猪脸肉切成小条。",
+      "冷锅不放油放入猪脸肉，中小火煎至金黄酥脆。",
+      "煮好的面直接放入肉锅中翻拌，加少量煮面水。",
+      "关火，加入大量佩科里诺干酪和黑胡椒，快速搅拌成丝滑酱汁。",
+      "利用余温让芝士融化，不要加热否则会结块。",
+      "立即装盘撒额外干酪和黑胡椒。"
+    ]
+  },
+  {
+    "id": "west_454",
+    "name": "意式蒜香辣椒面",
+    "nameEn": "Spaghetti Aglio e Olio",
+    "cuisine": "意式",
+    "category": "主食",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 12,
+    "servings": 4,
+    "spicy": true,
+    "emoji": "🍝",
+    "tags": [
+      "意式",
+      "意面",
+      "经典"
+    ],
+    "ingredients": [
+      {
+        "name": "意面(细面)",
+        "amount": "400g"
+      },
+      {
+        "name": "大蒜",
+        "amount": "6瓣"
+      },
+      {
+        "name": "干辣椒片",
+        "amount": "1小勺"
+      },
+      {
+        "name": "特级初榨橄榄油",
+        "amount": "6大勺"
+      },
+      {
+        "name": "新鲜欧芹(切碎)",
+        "amount": "3大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "大锅",
+      "平底锅",
+      "夹子"
+    ],
+    "steps": [
+      "大锅烧水加盐煮面。大蒜切薄片。",
+      "平底锅加橄榄油，小火放入蒜片和辣椒片，慢慢煎至大蒜微黄(不要焦)。",
+      "煮好的面直接放入锅中，加2-3大勺煮面水。",
+      "大火翻拌1-2分钟让面条吸收橄榄油，形成丝滑酱汁。",
+      "加入欧芹碎翻拌。",
+      "立即装盘。"
+    ]
+  },
+  {
+    "id": "west_455",
+    "name": "意式番茄罗勒面",
+    "nameEn": "Pasta al Pomodoro",
+    "cuisine": "意式",
+    "category": "主食",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍝",
+    "tags": [
+      "意式",
+      "意面",
+      "经典"
+    ],
+    "ingredients": [
+      {
+        "name": "意面(细面)",
+        "amount": "400g"
+      },
+      {
+        "name": "圣马扎诺番茄(罐装)",
+        "amount": "400g"
+      },
+      {
+        "name": "大蒜",
+        "amount": "3瓣"
+      },
+      {
+        "name": "特级初榨橄榄油",
+        "amount": "4大勺"
+      },
+      {
+        "name": "新鲜罗勒叶",
+        "amount": "10片"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": "适量"
+      },
+      {
+        "name": "帕尔马干酪",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "大锅",
+      "平底锅",
+      "夹子"
+    ],
+    "steps": [
+      "大锅烧水煮面。番茄用手捏碎。",
+      "平底锅加橄榄油，小火煎蒜片至微黄。",
+      "加入番茄碎，中火煮15分钟至浓缩成酱。",
+      "煮好的面加入酱汁中翻拌，加煮面水调节浓稠度。",
+      "撒新鲜罗勒叶、盐和黑胡椒。",
+      "装盘撒帕尔马干酪。"
+    ]
+  },
+  {
+    "id": "west_456",
+    "name": "法式白葡萄酒焗蛤蜊",
+    "nameEn": "Éclade de Moules",
+    "cuisine": "法式",
+    "category": "热菜",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🦪",
+    "tags": [
+      "法式",
+      "海鲜",
+      "白葡萄酒"
+    ],
+    "ingredients": [
+      {
+        "name": "青口贝",
+        "amount": "2kg"
+      },
+      {
+        "name": "白葡萄酒",
+        "amount": "200ml"
+      },
+      {
+        "name": "大蒜",
+        "amount": "4瓣"
+      },
+      {
+        "name": "小葱(切碎)",
+        "amount": "4根"
+      },
+      {
+        "name": "新鲜百里香",
+        "amount": "3枝"
+      },
+      {
+        "name": "月桂叶",
+        "amount": "2片"
+      },
+      {
+        "name": "黄油",
+        "amount": "40g"
+      },
+      {
+        "name": "浓奶油",
+        "amount": "100ml"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": "适量"
+      },
+      {
+        "name": "法棍面包(切片)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "大汤锅(带盖)",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "青口贝刷洗干净，去须，丢弃开口不闭的。",
+      "大汤锅中加黄油，炒蒜末和葱碎30秒。",
+      "加入青口贝、白葡萄酒、百里香和月桂叶，盖盖大火煮5分钟至所有贝开口(丢弃不开口的)。",
+      "取出香草。加入浓奶油搅拌。",
+      "盛入碗中，撒盐和黑胡椒。",
+      "配烤法棍面包蘸汁。"
+    ]
+  },
+  {
+    "id": "west_457",
+    "name": "法式烤羊排(芥末面包屑)",
+    "nameEn": "Carré d'Agneau Moutarde",
+    "cuisine": "法式",
+    "category": "热菜",
+    "difficulty": "中等",
+    "prepTime": 15,
+    "cookTime": 25,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🐑",
+    "tags": [
+      "法式",
+      "烤肉",
+      "芥末"
+    ],
+    "ingredients": [
+      {
+        "name": "法式羊排(整排)",
+        "amount": "1排(8骨)"
+      },
+      {
+        "name": "第戎芥末酱",
+        "amount": "3大勺"
+      },
+      {
+        "name": "面包屑",
+        "amount": "80g"
+      },
+      {
+        "name": "新鲜欧芹(切碎)",
+        "amount": "3大勺"
+      },
+      {
+        "name": "新鲜百里香(切碎)",
+        "amount": "1大勺"
+      },
+      {
+        "name": "大蒜(切末)",
+        "amount": "2瓣"
+      },
+      {
+        "name": "黄油(融化)",
+        "amount": "30g"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "烤盘",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "烤箱预热至220°C。羊排脂肪面朝下在平底锅中煎3分钟至金黄。",
+      "羊排脂肪面朝上，均匀涂抹第戎芥末酱。",
+      "面包屑、欧芹、百里香、蒜末和融化的黄油混合，撒在羊排上压实。",
+      "放入烤箱烤20-25分钟至内部温度55°C。",
+      "取出用锡纸包裹休息10分钟。",
+      "切成单骨羊排装盘。"
+    ]
+  },
+  {
+    "id": "west_458",
+    "name": "法式红酒梨(变体-香料)",
+    "nameEn": "Poires au Vin (Spiced)",
+    "cuisine": "法式",
+    "category": "甜品",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 30,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍐",
+    "tags": [
+      "法式",
+      "甜品",
+      "酒煮"
+    ],
+    "ingredients": [
+      {
+        "name": "梨",
+        "amount": "4个"
+      },
+      {
+        "name": "红酒",
+        "amount": "500ml"
+      },
+      {
+        "name": "砂糖",
+        "amount": "80g"
+      },
+      {
+        "name": "橙皮(strips)",
+        "amount": "1个"
+      },
+      {
+        "name": "肉桂棒",
+        "amount": "1根"
+      },
+      {
+        "name": "八角",
+        "amount": "2颗"
+      },
+      {
+        "name": "丁香",
+        "amount": "3颗"
+      },
+      {
+        "name": "黑胡椒粒",
+        "amount": "4粒"
+      },
+      {
+        "name": "香草精",
+        "amount": "1小勺"
+      }
+    ],
+    "tools": [
+      "小炖锅",
+      "削皮器"
+    ],
+    "steps": [
+      "梨去皮保留柄，底部削平。",
+      "红酒、砂糖、橙皮条、肉桂、八角、丁香和胡椒粒放入锅中煮沸至糖溶解。",
+      "放入梨，小火煮25-30分钟，不时浇红酒在梨上。",
+      "梨变软后取出。",
+      "红酒汁继续煮至浓稠糖浆。",
+      "浇糖浆在梨上。"
+    ]
+  },
+  {
+    "id": "west_459",
+    "name": "法式焦糖布丁(变体-薰衣草)",
+    "nameEn": "Crème Brûlée à la Lavande",
+    "cuisine": "法式",
+    "category": "甜品",
+    "difficulty": "中等",
+    "prepTime": 15,
+    "cookTime": 50,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍮",
+    "tags": [
+      "法式",
+      "甜品",
+      "薰衣草"
+    ],
+    "ingredients": [
+      {
+        "name": "浓奶油",
+        "amount": "500ml"
+      },
+      {
+        "name": "蛋黄",
+        "amount": "5个"
+      },
+      {
+        "name": "砂糖",
+        "amount": "80g"
+      },
+      {
+        "name": "干薰衣草花",
+        "amount": "1小勺"
+      },
+      {
+        "name": "砂糖(焦糖用)",
+        "amount": "4大勺"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "4个烤碗",
+      "搅拌碗",
+      "喷枪"
+    ],
+    "steps": [
+      "烤箱预热至150°C。奶油加薰衣草花加热至微沸，离火浸泡20分钟后过滤。",
+      "蛋黄和砂糖打至发白，慢慢倒入温热奶油搅拌。",
+      "过滤倒入烤碗中，水浴法烤40-45分钟。",
+      "冷藏至少4小时。",
+      "表面撒砂糖，用喷枪烤至焦糖色。",
+      "薰衣草花装饰。"
+    ]
+  },
+  {
+    "id": "west_460",
+    "name": "法式闪电泡芙(变体-咖啡)",
+    "nameEn": "Éclairs au Café",
+    "cuisine": "法式",
+    "category": "甜品",
+    "difficulty": "困难",
+    "prepTime": 45,
+    "cookTime": 30,
+    "servings": 12,
+    "spicy": false,
+    "emoji": "☕",
+    "tags": [
+      "法式",
+      "甜品",
+      "咖啡"
+    ],
+    "ingredients": [
+      {
+        "name": "水",
+        "amount": "125ml"
+      },
+      {
+        "name": "黄油",
+        "amount": "100g"
+      },
+      {
+        "name": "中筋面粉",
+        "amount": "150g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "4-5个"
+      },
+      {
+        "name": "砂糖",
+        "amount": "1小勺"
+      },
+      {
+        "name": "盐",
+        "amount": "一小撮"
+      },
+      {
+        "name": "咖啡利口酒",
+        "amount": "1大勺"
+      },
+      {
+        "name": "浓奶油",
+        "amount": "200ml"
+      },
+      {
+        "name": "牛奶",
+        "amount": "100ml"
+      },
+      {
+        "name": "蛋黄",
+        "amount": "3个"
+      },
+      {
+        "name": "砂糖(卡仕达用)",
+        "amount": "50g"
+      },
+      {
+        "name": "玉米淀粉",
+        "amount": "15g"
+      },
+      {
+        "name": "黄油(卡仕达用)",
+        "amount": "20g"
+      },
+      {
+        "name": "黑巧克力(淋面)",
+        "amount": "100g"
+      },
+      {
+        "name": "淡奶油(淋面用)",
+        "amount": "50ml"
+      }
+    ],
+    "tools": [
+      " saucepan",
+      "搅拌碗",
+      "电动打蛋器",
+      "裱花袋",
+      "烤箱"
+    ],
+    "steps": [
+      "泡芙面糊制作同经典闪电泡芙，挤成长条烤至金黄。",
+      "卡仕达酱制作同经典版，加入咖啡利口酒。",
+      "浓奶油打至六分发拌入咖啡卡仕达酱。",
+      "泡芙底部戳孔挤入馅料。",
+      "巧克力和淡奶油融化做淋面。",
+      "淋面后冷藏定型。"
+    ]
+  },
+  {
+    "id": "west_461",
+    "name": "法式千层酥(变体-巧克力)",
+    "nameEn": "Mille-Feuille au Chocolat",
+    "cuisine": "法式",
+    "category": "甜品",
+    "difficulty": "困难",
+    "prepTime": 60,
+    "cookTime": 30,
+    "servings": 8,
+    "spicy": false,
+    "emoji": "🍫",
+    "tags": [
+      "法式",
+      "甜品",
+      "巧克力"
+    ],
+    "ingredients": [
+      {
+        "name": "千层酥皮",
+        "amount": "3张"
+      },
+      {
+        "name": "牛奶",
+        "amount": "500ml"
+      },
+      {
+        "name": "蛋黄",
+        "amount": "5个"
+      },
+      {
+        "name": "砂糖",
+        "amount": "100g"
+      },
+      {
+        "name": "面粉",
+        "amount": "40g"
+      },
+      {
+        "name": "玉米淀粉",
+        "amount": "40g"
+      },
+      {
+        "name": "黄油",
+        "amount": "50g"
+      },
+      {
+        "name": "黑巧克力(碎)",
+        "amount": "50g"
+      },
+      {
+        "name": "香草精",
+        "amount": "1小勺"
+      },
+      {
+        "name": "浓奶油",
+        "amount": "200ml"
+      },
+      {
+        "name": "糖粉",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      " saucepan",
+      "电动打蛋器",
+      "裱花袋"
+    ],
+    "steps": [
+      "酥皮烤至金黄酥脆。卡仕达酱制作同经典版，加入融化的黑巧克力。",
+      "浓奶油打至六分发拌入巧克力卡仕达酱。",
+      "一层酥皮抹巧克力奶油馅，再放酥皮，再抹馅，盖上最后一层。",
+      "顶部筛糖粉。",
+      "冷藏2小时定型。",
+      "锋利刀切块。"
+    ]
+  },
+  {
+    "id": "west_462",
+    "name": "法式苹果塔(变体-诺曼底)",
+    "nameEn": "Tarte Normande aux Pommes",
+    "cuisine": "法式",
+    "category": "甜品",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 45,
+    "servings": 8,
+    "spicy": false,
+    "emoji": "🍎",
+    "tags": [
+      "法式",
+      "甜品",
+      "诺曼底"
+    ],
+    "ingredients": [
+      {
+        "name": "甜塔皮",
+        "amount": "1张(9寸)"
+      },
+      {
+        "name": "苹果(如金冠)",
+        "amount": "6个"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "2个"
+      },
+      {
+        "name": "砂糖",
+        "amount": "80g"
+      },
+      {
+        "name": "浓奶油",
+        "amount": "200ml"
+      },
+      {
+        "name": "杏仁粉",
+        "amount": "30g"
+      },
+      {
+        "name": "卡尔瓦多斯苹果白兰地",
+        "amount": "1大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "一小撮"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "9寸派盘",
+      "搅拌碗",
+      "电动打蛋器",
+      "砧板"
+    ],
+    "steps": [
+      "烤箱预热至190°C。塔皮放入派盘。苹果去皮去核切薄片。",
+      "鸡蛋、砂糖、浓奶油、杏仁粉、卡尔瓦多斯和盐混合搅打。",
+      "苹果片紧密排列在塔皮上。",
+      "倒入蛋奶混合物。",
+      "烤35-40分钟至蛋奶凝固、苹果软烂。",
+      "放凉后食用。"
+    ]
+  },
+  {
+    "id": "west_463",
+    "name": "法式酒酿樱桃(变体-浆果)",
+    "nameEn": "Clafoutis aux Fruits Rouges",
+    "cuisine": "法式",
+    "category": "甜品",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 35,
+    "servings": 6,
+    "spicy": false,
+    "emoji": "🍒",
+    "tags": [
+      "法式",
+      "甜品",
+      "浆果"
+    ],
+    "ingredients": [
+      {
+        "name": "混合莓果(草莓、蓝莓、覆盆子)",
+        "amount": "400g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "3个"
+      },
+      {
+        "name": "砂糖",
+        "amount": "80g"
+      },
+      {
+        "name": "中筋面粉",
+        "amount": "60g"
+      },
+      {
+        "name": "牛奶",
+        "amount": "250ml"
+      },
+      {
+        "name": "浓奶油",
+        "amount": "100ml"
+      },
+      {
+        "name": "香草精",
+        "amount": "1小勺"
+      },
+      {
+        "name": "盐",
+        "amount": "一小撮"
+      },
+      {
+        "name": "黄油(抹模具)",
+        "amount": "少许"
+      },
+      {
+        "name": "糖粉",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "9寸圆烤盘",
+      "搅拌碗",
+      "电动打蛋器"
+    ],
+    "steps": [
+      "烤箱预热至180°C。烤盘抹黄油。莓果洗净沥干。",
+      "鸡蛋和砂糖打至发白，筛入面粉，加入牛奶、奶油、香草精和盐搅拌成蛋奶糊。",
+      "莓果铺在烤盘底部，倒入蛋奶糊。",
+      "烤35-40分钟至表面金黄、中心凝固。",
+      "放凉5分钟。",
+      "筛糖粉装饰。"
+    ]
+  },
+  {
+    "id": "west_464",
+    "name": "克罗克夫人三明治",
+    "nameEn": "Croque Madame",
+    "cuisine": "法式",
+    "category": "三明治",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 12,
+    "servings": 2,
+    "spicy": false,
+    "emoji": "🥪",
+    "tags": [
+      "法式",
+      "三明治",
+      "经典"
+    ],
+    "ingredients": [
+      {
+        "name": "白面包(厚切)",
+        "amount": "4片"
+      },
+      {
+        "name": "烟熏火腿",
+        "amount": "4片"
+      },
+      {
+        "name": "格鲁耶尔芝士(切片)",
+        "amount": "100g"
+      },
+      {
+        "name": "黄油(软化)",
+        "amount": "30g"
+      },
+      {
+        "name": "面粉",
+        "amount": "1大勺"
+      },
+      {
+        "name": "牛奶",
+        "amount": "100ml"
+      },
+      {
+        "name": "第戎芥末酱",
+        "amount": "1小勺"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "2个"
+      },
+      {
+        "name": "盐",
+        "amount": "少许"
+      },
+      {
+        "name": "白胡椒",
+        "amount": "少许"
+      },
+      {
+        "name": "肉豆蔻粉",
+        "amount": "一小撮"
+      }
+    ],
+    "tools": [
+      "平底锅",
+      " saucepan",
+      "砧板"
+    ],
+    "steps": [
+      "白酱制作同Croque Monsieur。",
+      "面包涂芥末酱和白酱，放火腿和芝士，盖上另一片面包。",
+      "顶部抹白酱撒芝士。放入200°C烤箱烤8-10分钟。",
+      "平底锅煎两个太阳蛋。",
+      "烤好的三明治上放煎蛋。",
+      "这就是Croque Madame(加了蛋的版本)。"
+    ]
+  },
+  {
+    "id": "west_465",
+    "name": "法式火腿三明治",
+    "nameEn": "Jambon-Beurre",
+    "cuisine": "法式",
+    "category": "三明治",
+    "difficulty": "简单",
+    "prepTime": 5,
+    "cookTime": 0,
+    "servings": 2,
+    "spicy": false,
+    "emoji": "🥖",
+    "tags": [
+      "法式",
+      "三明治",
+      "巴黎"
+    ],
+    "ingredients": [
+      {
+        "name": "法棍面包",
+        "amount": "1条"
+      },
+      {
+        "name": "烟熏火腿(巴黎火腿)",
+        "amount": "100g"
+      },
+      {
+        "name": "黄油(软化)",
+        "amount": "40g"
+      },
+      {
+        "name": "玉米ichon酱(或第戎芥末)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "砧板",
+      "锋利刀"
+    ],
+    "steps": [
+      "法棍从侧面切开(不要完全切断)。",
+      "内面均匀涂软化黄油。",
+      "铺上烟熏火腿片。",
+      "可涂芥末酱。",
+      "紧密合上。",
+      "巴黎人的经典午餐三明治。"
+    ]
+  },
+  {
+    "id": "west_466",
+    "name": "日式荞麦面(冷)",
+    "nameEn": "Zaru Soba",
+    "cuisine": "日式",
+    "category": "主食",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 5,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍜",
+    "tags": [
+      "日式",
+      "荞麦面",
+      "冷面"
+    ],
+    "ingredients": [
+      {
+        "name": "干荞麦面",
+        "amount": "300g"
+      },
+      {
+        "name": "日式高汤(dashi)",
+        "amount": "300ml"
+      },
+      {
+        "name": "酱油",
+        "amount": "100ml"
+      },
+      {
+        "name": "味醂",
+        "amount": "50ml"
+      },
+      {
+        "name": "芥末(wasabi)",
+        "amount": "适量"
+      },
+      {
+        "name": "葱花",
+        "amount": "适量"
+      },
+      {
+        "name": "海苔丝",
+        "amount": "适量"
+      },
+      {
+        "name": "天妇罗虾(配食)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "煮锅",
+      "竹帘(放置)",
+      "小碗"
+    ],
+    "steps": [
+      "日式高汤、酱油和味醂混合成蘸汁，冷藏。",
+      "大锅烧水煮沸，放入荞麦面按包装说明煮(通常4-5分钟)。",
+      "捞出放入冰水中冷却，沥干。",
+      "荞麦面放在竹帘上(或盘中)。",
+      "配冷蘸汁、芥末、葱花和海苔丝。",
+      "夹面蘸汁食用。"
+    ]
+  },
+  {
+    "id": "west_467",
+    "name": "日式乌冬面(汤面)",
+    "nameEn": "Kake Udon",
+    "cuisine": "日式",
+    "category": "主食",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 10,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍜",
+    "tags": [
+      "日式",
+      "乌冬面",
+      "汤面"
+    ],
+    "ingredients": [
+      {
+        "name": "乌冬面(冷冻)",
+        "amount": "400g"
+      },
+      {
+        "name": "日式高汤(dashi)",
+        "amount": "800ml"
+      },
+      {
+        "name": "酱油",
+        "amount": "3大勺"
+      },
+      {
+        "name": "味醂",
+        "amount": "1大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "葱花",
+        "amount": "适量"
+      },
+      {
+        "name": "天妇罗虾",
+        "amount": "4只"
+      },
+      {
+        "name": "薄姜片",
+        "amount": "2片"
+      }
+    ],
+    "tools": [
+      "煮锅",
+      "小碗"
+    ],
+    "steps": [
+      "日式高汤煮沸，加入酱油、味醂和盐调味。",
+      "乌冬面放入沸水中煮2-3分钟至柔软，沥干。",
+      "碗中放入乌冬面，浇入热汤。",
+      "上面放天妇罗虾和姜片。",
+      "撒葱花。",
+      "趁热食用。"
+    ]
+  },
+  {
+    "id": "west_468",
+    "name": "日式咖喱(变体-蔬菜)",
+    "nameEn": "Japanese Vegetable Curry",
+    "cuisine": "日式",
+    "category": "热菜",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 25,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍛",
+    "tags": [
+      "日式",
+      "咖喱",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "土豆",
+        "amount": "2个"
+      },
+      {
+        "name": "胡萝卜",
+        "amount": "1根"
+      },
+      {
+        "name": "洋葱",
+        "amount": "2个"
+      },
+      {
+        "name": "蘑菇",
+        "amount": "150g"
+      },
+      {
+        "name": "甜椒",
+        "amount": "1个"
+      },
+      {
+        "name": "日式咖喱块",
+        "amount": "80g"
+      },
+      {
+        "name": "水",
+        "amount": "600ml"
+      },
+      {
+        "name": "植物油",
+        "amount": "1大勺"
+      },
+      {
+        "name": "米饭(配食)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "煮锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "土豆和胡萝卜切小块，洋葱切丁，蘑菇切半，甜椒切块。",
+      "锅中加油炒洋葱至透明，加入土豆、胡萝卜和蘑菇炒3分钟。",
+      "加水煮沸后转小火煮15分钟至蔬菜软烂。",
+      "关火加入咖喱块搅拌至融化。",
+      "加入甜椒，小火煮5分钟。",
+      "配米饭。"
+    ]
+  },
+  {
+    "id": "west_469",
+    "name": "日式照烧鸡",
+    "nameEn": "Teriyaki Chicken Thighs",
+    "cuisine": "日式",
+    "category": "热菜",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍗",
+    "tags": [
+      "日式",
+      "照烧",
+      "鸡肉"
+    ],
+    "ingredients": [
+      {
+        "name": "鸡腿(去骨)",
+        "amount": "4块"
+      },
+      {
+        "name": "酱油",
+        "amount": "4大勺"
+      },
+      {
+        "name": "味醂",
+        "amount": "3大勺"
+      },
+      {
+        "name": "清酒",
+        "amount": "2大勺"
+      },
+      {
+        "name": "砂糖",
+        "amount": "1大勺"
+      },
+      {
+        "name": "植物油",
+        "amount": "1大勺"
+      },
+      {
+        "name": "白芝麻",
+        "amount": "适量"
+      },
+      {
+        "name": "葱花",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "平底锅",
+      "小碗",
+      "砧板"
+    ],
+    "steps": [
+      "鸡腿肉用叉子戳几下便于入味。",
+      "酱油、味醂、清酒和砂糖混合成照烧酱。",
+      "平底锅加油，鸡皮面朝下中火煎5分钟至皮酥脆。",
+      "翻面煎4分钟，倒入照烧酱。",
+      "中火收汁，不断将酱汁浇在鸡肉上至浓稠。",
+      "切块撒白芝麻和葱花。"
+    ]
+  },
+  {
+    "id": "west_470",
+    "name": "日式味噌烤三文鱼",
+    "nameEn": "Miso Glazed Salmon",
+    "cuisine": "日式",
+    "category": "热菜",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 12,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🐟",
+    "tags": [
+      "日式",
+      "味噌",
+      "三文鱼"
+    ],
+    "ingredients": [
+      {
+        "name": "三文鱼排",
+        "amount": "4块"
+      },
+      {
+        "name": "白味噌",
+        "amount": "3大勺"
+      },
+      {
+        "name": "味醂",
+        "amount": "2大勺"
+      },
+      {
+        "name": "清酒",
+        "amount": "1大勺"
+      },
+      {
+        "name": "砂糖",
+        "amount": "1大勺"
+      },
+      {
+        "name": "生姜(磨泥)",
+        "amount": "1小勺"
+      }
+    ],
+    "tools": [
+      "搅拌碗",
+      "烤箱",
+      "烤盘",
+      "锡纸"
+    ],
+    "steps": [
+      "白味噌、味醂、清酒、砂糖和姜泥混合成味噌酱。",
+      "三文鱼排两面涂味噌酱，冷藏腌制30分钟至过夜。",
+      "烤箱预热至200°C。三文鱼放在铺了锡纸的烤盘上。",
+      "烤10-12分钟至表面微焦、内部多汁。",
+      "可最后1分钟开broil档使表面焦糖化。",
+      "配米饭和蔬菜。"
+    ]
+  },
+  {
+    "id": "west_471",
+    "name": "韩式石锅拌饭(变体-五色)",
+    "nameEn": "Oseo Bibimbap",
+    "cuisine": "韩式",
+    "category": "主食",
+    "difficulty": "中等",
+    "prepTime": 30,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍚",
+    "tags": [
+      "韩式",
+      "拌饭",
+      "五色"
+    ],
+    "ingredients": [
+      {
+        "name": "米饭",
+        "amount": "4碗"
+      },
+      {
+        "name": "牛肉(切薄片)",
+        "amount": "200g"
+      },
+      {
+        "name": "菠菜",
+        "amount": "100g"
+      },
+      {
+        "name": "豆芽",
+        "amount": "100g"
+      },
+      {
+        "name": "胡萝卜(切丝)",
+        "amount": "1根"
+      },
+      {
+        "name": "西葫芦(切丝)",
+        "amount": "半个"
+      },
+      {
+        "name": "蘑菇(切片)",
+        "amount": "100g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "4个"
+      },
+      {
+        "name": "大蒜(切末)",
+        "amount": "2瓣"
+      },
+      {
+        "name": "芝麻油",
+        "amount": "3大勺"
+      },
+      {
+        "name": "酱油",
+        "amount": "2大勺"
+      },
+      {
+        "name": "韩国辣椒酱(gochujang)",
+        "amount": "4大勺"
+      },
+      {
+        "name": "白芝麻",
+        "amount": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "石锅(或碗)",
+      "平底锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "菠菜和豆芽分别焯水，拌芝麻油和盐。胡萝卜和西葫芦丝分别炒软。蘑菇炒软。牛肉用酱油和蒜末炒熟。",
+      "石锅刷芝麻油，放入米饭。",
+      "将各种蔬菜和牛肉放射状排列在米饭上。",
+      "中间打一个生鸡蛋。",
+      "石锅直接加热至底部米饭形成锅巴。",
+      "配韩国辣椒酱，拌匀食用。"
+    ]
+  },
+  {
+    "id": "west_472",
+    "name": "韩式拌饭(冷面版)",
+    "nameEn": "Bibim Naengmyeon",
+    "cuisine": "韩式",
+    "category": "主食",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": true,
+    "emoji": "🍜",
+    "tags": [
+      "韩式",
+      "冷面",
+      "辣"
+    ],
+    "ingredients": [
+      {
+        "name": "荞麦冷面",
+        "amount": "400g"
+      },
+      {
+        "name": "牛肉(切片)",
+        "amount": "100g"
+      },
+      {
+        "name": "黄瓜(切丝)",
+        "amount": "1根"
+      },
+      {
+        "name": "梨(切丝)",
+        "amount": "半个"
+      },
+      {
+        "name": "鸡蛋(煮好切半)",
+        "amount": "2个"
+      },
+      {
+        "name": "韩国辣椒酱",
+        "amount": "4大勺"
+      },
+      {
+        "name": "酱油",
+        "amount": "2大勺"
+      },
+      {
+        "name": "醋",
+        "amount": "2大勺"
+      },
+      {
+        "name": "砂糖",
+        "amount": "1大勺"
+      },
+      {
+        "name": "芝麻油",
+        "amount": "1大勺"
+      },
+      {
+        "name": "大蒜(切末)",
+        "amount": "1瓣"
+      },
+      {
+        "name": "白芝麻",
+        "amount": "适量"
+      },
+      {
+        "name": "冰块",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "煮锅",
+      "砧板",
+      "菜刀",
+      "大碗"
+    ],
+    "steps": [
+      "冷面按包装说明煮好，过冰水沥干。",
+      "辣椒酱、酱油、醋、砂糖、芝麻油和蒜末混合成调味酱。",
+      "碗中放冷面，上面放牛肉片、黄瓜丝、梨丝和半个鸡蛋。",
+      "浇调味酱。",
+      "加冰块。",
+      "拌匀食用。"
+    ]
+  },
+  {
+    "id": "west_473",
+    "name": "韩式炸鸡(酱油蒜香)",
+    "nameEn": "Ganjang Fried Chicken",
+    "cuisine": "韩式",
+    "category": "热菜",
+    "difficulty": "中等",
+    "prepTime": 30,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍗",
+    "tags": [
+      "韩式",
+      "炸鸡",
+      "酱油"
+    ],
+    "ingredients": [
+      {
+        "name": "鸡翅根",
+        "amount": "800g"
+      },
+      {
+        "name": "中筋面粉",
+        "amount": "100g"
+      },
+      {
+        "name": "玉米淀粉",
+        "amount": "50g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "1个"
+      },
+      {
+        "name": "牛奶",
+        "amount": "2大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "1小勺"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": "适量"
+      },
+      {
+        "name": "植物油(炸用)",
+        "amount": "适量"
+      },
+      {
+        "name": "酱油",
+        "amount": "3大勺"
+      },
+      {
+        "name": "大蒜(磨泥)",
+        "amount": "3瓣"
+      },
+      {
+        "name": "砂糖",
+        "amount": "2大勺"
+      },
+      {
+        "name": "蜂蜜",
+        "amount": "1大勺"
+      },
+      {
+        "name": "清酒",
+        "amount": "1大勺"
+      },
+      {
+        "name": "芝麻油",
+        "amount": "1小勺"
+      },
+      {
+        "name": "白芝麻",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "炸锅",
+      "搅拌碗",
+      "厨房纸",
+      "平底锅"
+    ],
+    "steps": [
+      "鸡肉撒盐和胡椒。面粉、玉米淀粉、鸡蛋和牛奶混合成面糊，鸡肉裹面糊。",
+      "170°C炸至金黄捞出，190°C复炸1分钟。",
+      "制作酱油蒜香酱：酱油、蒜泥、砂糖、蜂蜜、清酒和芝麻油混合。",
+      "平底锅中倒入酱汁加热至冒泡。",
+      "放入炸鸡快速翻拌均匀。",
+      "撒白芝麻。"
+    ]
+  },
+  {
+    "id": "west_474",
+    "name": "韩式烤肉(牛舌)",
+    "nameEn": "Gyu-Tan BBQ",
+    "cuisine": "韩式",
+    "category": "热菜",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 10,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🥩",
+    "tags": [
+      "韩式",
+      "烤肉",
+      "牛舌"
+    ],
+    "ingredients": [
+      {
+        "name": "盐腌牛舌(薄片)",
+        "amount": "300g"
+      },
+      {
+        "name": "柠檬(切角)",
+        "amount": "2个"
+      },
+      {
+        "name": "葱花",
+        "amount": "适量"
+      },
+      {
+        "name": "辣椒粉",
+        "amount": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "生菜叶",
+        "amount": "适量"
+      },
+      {
+        "name": "韩式辣酱",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "烤架或平底锅",
+      "砧板"
+    ],
+    "steps": [
+      "牛舌薄片解冻。",
+      "烤架或平底锅大火预热，不放油。",
+      "牛舌每面烤30秒至1分钟(不要烤老)。",
+      "撒少许盐。",
+      "配柠檬角挤汁，包生菜叶和辣酱食用。",
+      "牛舌口感脆嫩。"
+    ]
+  },
+  {
+    "id": "west_475",
+    "name": "韩式辣豆腐汤(变体-海鲜)",
+    "nameEn": "Haemul Sundubu",
+    "cuisine": "韩式",
+    "category": "汤品",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": true,
+    "emoji": "🥘",
+    "tags": [
+      "韩式",
+      "汤品",
+      "海鲜"
+    ],
+    "ingredients": [
+      {
+        "name": "嫩豆腐",
+        "amount": "400g"
+      },
+      {
+        "name": "蛤蜊",
+        "amount": "200g"
+      },
+      {
+        "name": "虾",
+        "amount": "100g"
+      },
+      {
+        "name": "鱿鱼(切圈)",
+        "amount": "100g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "2个"
+      },
+      {
+        "name": "韩国辣椒粉",
+        "amount": "1大勺"
+      },
+      {
+        "name": "韩国辣椒酱",
+        "amount": "1大勺"
+      },
+      {
+        "name": "大蒜(切末)",
+        "amount": "2瓣"
+      },
+      {
+        "name": "大酱",
+        "amount": "1大勺"
+      },
+      {
+        "name": "水",
+        "amount": "500ml"
+      },
+      {
+        "name": "植物油",
+        "amount": "1大勺"
+      },
+      {
+        "name": "葱花",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "石锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "蛤蜊泡盐水吐沙。嫩豆腐切块。",
+      "石锅加油炒蒜末和辣椒酱，加入辣椒粉和大酱炒香。",
+      "加水煮沸，放入蛤蜊和虾。",
+      "煮5分钟后加入豆腐和鱿鱼，继续煮3分钟。",
+      "打入鸡蛋，撒葱花。",
+      "石锅直接上桌。"
+    ]
+  },
+  {
+    "id": "west_476",
+    "name": "墨西哥卷饼(素食)",
+    "nameEn": "Vegetarian Burrito",
+    "cuisine": "墨西哥",
+    "category": "主食",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🌯",
+    "tags": [
+      "墨西哥",
+      "卷饼",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "大号面饼",
+        "amount": "4张"
+      },
+      {
+        "name": "黑豆(罐装)",
+        "amount": "200g"
+      },
+      {
+        "name": "米饭",
+        "amount": "200g"
+      },
+      {
+        "name": "甜椒(切条)",
+        "amount": "2个"
+      },
+      {
+        "name": "洋葱(切条)",
+        "amount": "1个"
+      },
+      {
+        "name": "蘑菇(切片)",
+        "amount": "150g"
+      },
+      {
+        "name": "牛油果(切片)",
+        "amount": "1个"
+      },
+      {
+        "name": "酸奶油",
+        "amount": "适量"
+      },
+      {
+        "name": "切达芝士(碎)",
+        "amount": "50g"
+      },
+      {
+        "name": "香菜",
+        "amount": "适量"
+      },
+      {
+        "name": "青柠汁",
+        "amount": "1大勺"
+      },
+      {
+        "name": "孜然粉",
+        "amount": "1小勺"
+      },
+      {
+        "name": "辣椒粉",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "植物油",
+        "amount": "2大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "平底锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "甜椒、洋葱和蘑菇用孜然粉和辣椒粉炒软。黑豆加热调味。",
+      "面饼微波加热。",
+      "中间放米饭、黑豆、炒蔬菜、牛油果、芝士和酸奶油。",
+      "挤青柠汁，撒香菜。",
+      "紧紧卷起。",
+      "对半切。"
+    ]
+  },
+  {
+    "id": "west_477",
+    "name": "墨西哥塔可(鱼)",
+    "nameEn": "Baja Fish Tacos",
+    "cuisine": "墨西哥",
+    "category": "主食",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 15,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🌮",
+    "tags": [
+      "墨西哥",
+      "塔可",
+      "海鲜"
+    ],
+    "ingredients": [
+      {
+        "name": "白鱼排(如鳕鱼)",
+        "amount": "400g"
+      },
+      {
+        "name": "啤酒面糊",
+        "amount": "150g"
+      },
+      {
+        "name": "玉米面饼",
+        "amount": "8张"
+      },
+      {
+        "name": "卷心菜丝",
+        "amount": "150g"
+      },
+      {
+        "name": "牛油果酱",
+        "amount": "适量"
+      },
+      {
+        "name": "墨西哥辣酱",
+        "amount": "适量"
+      },
+      {
+        "name": "青柠汁",
+        "amount": "2大勺"
+      },
+      {
+        "name": "白葡萄酒",
+        "amount": "1大勺"
+      },
+      {
+        "name": "辣椒粉",
+        "amount": "1小勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "植物油(炸用)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "炸锅",
+      "平底锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "鱼排切条，用辣椒粉、盐和青柠汁腌制15分钟。",
+      "鱼条蘸啤酒面糊，175°C炸至金黄酥脆。",
+      "玉米面饼在干锅上烤至微焦。",
+      "面饼上放炸鱼条、卷心菜丝。",
+      "配牛油果酱和辣酱。",
+      "挤青柠汁。"
+    ]
+  },
+  {
+    "id": "west_478",
+    "name": "墨西哥玉米片(变体-芝士)",
+    "nameEn": "Chile con Queso Nachos",
+    "cuisine": "墨西哥",
+    "category": "小吃",
+    "difficulty": "简单",
+    "prepTime": 10,
+    "cookTime": 10,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🧀",
+    "tags": [
+      "墨西哥",
+      "小吃",
+      "芝士"
+    ],
+    "ingredients": [
+      {
+        "name": "玉米片",
+        "amount": "300g"
+      },
+      {
+        "name": "切达芝士(碎)",
+        "amount": "200g"
+      },
+      {
+        "name": "墨西哥辣椒(切丁)",
+        "amount": "2个"
+      },
+      {
+        "name": "番茄(切丁)",
+        "amount": "2个"
+      },
+      {
+        "name": "洋葱(切丁)",
+        "amount": "半个"
+      },
+      {
+        "name": "酸奶油",
+        "amount": "适量"
+      },
+      {
+        "name": "牛油果酱",
+        "amount": "适量"
+      },
+      {
+        "name": "墨西哥辣酱",
+        "amount": "适量"
+      },
+      {
+        "name": "青葱(切碎)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "大烤盘"
+    ],
+    "steps": [
+      "烤箱预热至200°C。",
+      "烤盘上铺玉米片，撒一半芝士。",
+      "撒上辣椒丁、番茄丁和洋葱丁。",
+      "撒剩余芝士。",
+      "烤8-10分钟至芝士融化起泡。",
+      "取出配酸奶油、牛油果酱和辣酱。"
+    ]
+  },
+  {
+    "id": "west_479",
+    "name": "墨西哥海鲜汤",
+    "nameEn": "Sopa de Mariscos",
+    "cuisine": "墨西哥",
+    "category": "汤品",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 25,
+    "servings": 4,
+    "spicy": true,
+    "emoji": "🍲",
+    "tags": [
+      "墨西哥",
+      "汤品",
+      "海鲜"
+    ],
+    "ingredients": [
+      {
+        "name": "大虾",
+        "amount": "200g"
+      },
+      {
+        "name": "白鱼(切块)",
+        "amount": "200g"
+      },
+      {
+        "name": "蛤蜊",
+        "amount": "200g"
+      },
+      {
+        "name": "番茄(罐装)",
+        "amount": "400g"
+      },
+      {
+        "name": "洋葱",
+        "amount": "1个"
+      },
+      {
+        "name": "大蒜",
+        "amount": "3瓣"
+      },
+      {
+        "name": "辣椒片",
+        "amount": "1小勺"
+      },
+      {
+        "name": "鱼高汤",
+        "amount": "500ml"
+      },
+      {
+        "name": "白葡萄酒",
+        "amount": "100ml"
+      },
+      {
+        "name": "香菜",
+        "amount": "适量"
+      },
+      {
+        "name": "青柠汁",
+        "amount": "2大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "汤锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "洋葱和大蒜切碎。汤锅加油炒洋葱至透明，加大蒜和辣椒片。",
+      "加入罐装番茄炒3分钟。",
+      "倒入鱼高汤和白葡萄酒，煮沸后转小火煮10分钟。",
+      "加入鱼块煮5分钟，加入虾和蛤蜊煮3分钟至虾变红、贝开口。",
+      "加青柠汁和盐调味。",
+      "盛碗撒香菜。"
+    ]
+  },
+  {
+    "id": "west_480",
+    "name": "泰式绿咖喱(变体-虾)",
+    "nameEn": "Green Curry Shrimp",
+    "cuisine": "泰式",
+    "category": "热菜",
+    "difficulty": "中等",
+    "prepTime": 15,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": true,
+    "emoji": "🍛",
+    "tags": [
+      "泰式",
+      "咖喱",
+      "虾"
+    ],
+    "ingredients": [
+      {
+        "name": "大虾",
+        "amount": "400g"
+      },
+      {
+        "name": "绿咖喱酱",
+        "amount": "3大勺"
+      },
+      {
+        "name": "椰奶",
+        "amount": "400ml"
+      },
+      {
+        "name": "泰国茄子",
+        "amount": "100g"
+      },
+      {
+        "name": "青椒",
+        "amount": "1个"
+      },
+      {
+        "name": "竹笋",
+        "amount": "100g"
+      },
+      {
+        "name": "泰国罗勒叶",
+        "amount": "1把"
+      },
+      {
+        "name": "鱼露",
+        "amount": "2大勺"
+      },
+      {
+        "name": "椰糖",
+        "amount": "1大勺"
+      },
+      {
+        "name": "青柠叶",
+        "amount": "4片"
+      },
+      {
+        "name": "植物油",
+        "amount": "1大勺"
+      }
+    ],
+    "tools": [
+      "炒锅",
+      "砧板"
+    ],
+    "steps": [
+      "虾去壳去虾线。茄子切半，青椒切条。",
+      "椰奶浓稠部分加绿咖喱酱炒2分钟至出香。",
+      "加入虾翻炒至变色，倒入剩余椰奶。",
+      "加入茄子、竹笋和青柠叶煮10分钟。",
+      "加鱼露和椰糖调味，最后加青椒和罗勒叶。",
+      "配泰国香米。"
+    ]
+  },
+  {
+    "id": "west_481",
+    "name": "泰式黄咖喱(变体-素食)",
+    "nameEn": "Yellow Curry Tofu",
+    "cuisine": "泰式",
+    "category": "热菜",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 20,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🍛",
+    "tags": [
+      "泰式",
+      "咖喱",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "老豆腐(切块)",
+        "amount": "400g"
+      },
+      {
+        "name": "黄咖喱酱",
+        "amount": "3大勺"
+      },
+      {
+        "name": "椰奶",
+        "amount": "400ml"
+      },
+      {
+        "name": "土豆",
+        "amount": "2个"
+      },
+      {
+        "name": "胡萝卜",
+        "amount": "1根"
+      },
+      {
+        "name": "洋葱",
+        "amount": "1个"
+      },
+      {
+        "name": "鱼露",
+        "amount": "1大勺"
+      },
+      {
+        "name": "椰糖",
+        "amount": "1大勺"
+      },
+      {
+        "name": "青柠汁",
+        "amount": "1大勺"
+      },
+      {
+        "name": "植物油",
+        "amount": "2大勺"
+      },
+      {
+        "name": "花生",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "炒锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "豆腐切块用厨房纸吸干。平底锅加油煎至两面金黄。",
+      "土豆和胡萝卜切滚刀块，洋葱切瓣。",
+      "椰奶浓稠部分加黄咖喱酱炒2分钟。",
+      "加入土豆、胡萝卜、洋葱和剩余椰奶，煮15分钟。",
+      "加入煎好的豆腐，煮5分钟。加鱼露、椰糖和青柠汁调味。",
+      "撒花生碎。"
+    ]
+  },
+  {
+    "id": "west_482",
+    "name": "印度烤饼(变体-蒜香)",
+    "nameEn": "Garlic Naan",
+    "cuisine": "印度",
+    "category": "主食",
+    "difficulty": "中等",
+    "prepTime": 60,
+    "cookTime": 10,
+    "servings": 8,
+    "spicy": false,
+    "emoji": "🫓",
+    "tags": [
+      "印度",
+      "面包",
+      "蒜香"
+    ],
+    "ingredients": [
+      {
+        "name": "中筋面粉",
+        "amount": "400g"
+      },
+      {
+        "name": "酵母",
+        "amount": "5g"
+      },
+      {
+        "name": "砂糖",
+        "amount": "1小勺"
+      },
+      {
+        "name": "盐",
+        "amount": "1小勺"
+      },
+      {
+        "name": "酸奶",
+        "amount": "150g"
+      },
+      {
+        "name": "牛奶(温)",
+        "amount": "100ml"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "1个"
+      },
+      {
+        "name": "黄油(融化)",
+        "amount": "30g"
+      },
+      {
+        "name": "大蒜(切末)",
+        "amount": "4瓣"
+      },
+      {
+        "name": "香菜(切碎)",
+        "amount": "2大勺"
+      },
+      {
+        "name": "植物油",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "搅拌碗",
+      "擀面杖",
+      "平底锅"
+    ],
+    "steps": [
+      "面团制作同经典馕饼，发酵1小时。",
+      "分成8份，擀成椭圆形。",
+      "表面刷蒜泥油，撒香菜。",
+      "平底锅大火加热至冒烟。",
+      "面饼放入锅中煎30秒起泡，翻面煎至有焦斑。",
+      "出炉刷黄油。"
+    ]
+  },
+  {
+    "id": "west_483",
+    "name": "印度比尔亚尼菜(变体-蔬菜)",
+    "nameEn": "Vegetable Biryani",
+    "cuisine": "印度",
+    "category": "主食",
+    "difficulty": "困难",
+    "prepTime": 40,
+    "cookTime": 45,
+    "servings": 6,
+    "spicy": false,
+    "emoji": "🍚",
+    "tags": [
+      "印度",
+      "米饭",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "印度香米",
+        "amount": "400g"
+      },
+      {
+        "name": "混合蔬菜(土豆、花椰菜、胡萝卜、豌豆)",
+        "amount": "500g"
+      },
+      {
+        "name": "洋葱",
+        "amount": "2个"
+      },
+      {
+        "name": "番茄",
+        "amount": "2个"
+      },
+      {
+        "name": "大蒜",
+        "amount": "4瓣"
+      },
+      {
+        "name": "生姜",
+        "amount": "15g"
+      },
+      {
+        "name": "印度混合香料",
+        "amount": "2小勺"
+      },
+      {
+        "name": "姜黄粉",
+        "amount": "1小勺"
+      },
+      {
+        "name": "辣椒粉",
+        "amount": "1小勺"
+      },
+      {
+        "name": "酸奶",
+        "amount": "100g"
+      },
+      {
+        "name": "藏红花",
+        "amount": "一小撮"
+      },
+      {
+        "name": "薄荷叶",
+        "amount": "适量"
+      },
+      {
+        "name": "香菜叶",
+        "amount": "适量"
+      },
+      {
+        "name": "植物油",
+        "amount": "3大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "水",
+        "amount": "600ml"
+      }
+    ],
+    "tools": [
+      "大厚底锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "香米浸泡30分钟。蔬菜切块。藏红花泡温水中。",
+      "锅中加油炒洋葱至深金色，加蒜末和姜末。",
+      "加番茄和所有香料炒5分钟。",
+      "加入蔬菜和酸奶翻炒5分钟。",
+      "加入米和藏红花水，加水煮沸后盖盖小火焖煮30分钟。",
+      "轻轻翻拌后配酸奶黄瓜酱。"
+    ]
+  },
+  {
+    "id": "west_484",
+    "name": "印度萨莫萨(变体-蔬菜)",
+    "nameEn": "Vegetable Samosa",
+    "cuisine": "印度",
+    "category": "小吃",
+    "difficulty": "困难",
+    "prepTime": 40,
+    "cookTime": 20,
+    "servings": 12,
+    "spicy": true,
+    "emoji": "🥟",
+    "tags": [
+      "印度",
+      "小吃",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "中筋面粉",
+        "amount": "200g"
+      },
+      {
+        "name": "植物油(面团用)",
+        "amount": "4大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "水",
+        "amount": "适量"
+      },
+      {
+        "name": "土豆(煮熟切丁)",
+        "amount": "300g"
+      },
+      {
+        "name": "青豌豆",
+        "amount": "100g"
+      },
+      {
+        "name": "洋葱(切碎)",
+        "amount": "1个"
+      },
+      {
+        "name": "青辣椒(切碎)",
+        "amount": "2个"
+      },
+      {
+        "name": "姜黄粉",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "印度混合香料",
+        "amount": "1小勺"
+      },
+      {
+        "name": "芒果干粉",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "香菜(切碎)",
+        "amount": "2大勺"
+      },
+      {
+        "name": "植物油(炸用)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "搅拌碗",
+      "擀面杖",
+      "炸锅",
+      "砧板"
+    ],
+    "steps": [
+      "面团制作同经典版。土豆和豌豆馅料制作同经典版。",
+      "面皮切成半圆，卷成锥形填馅。",
+      "边缘捏紧封口。",
+      "170°C炸至金黄酥脆。",
+      "沥油。",
+      "配薄荷酸辣酱。"
+    ]
+  },
+  {
+    "id": "west_485",
+    "name": "印度扁豆汤(变体-黄扁豆)",
+    "nameEn": "Dal Tadka (Yellow)",
+    "cuisine": "印度",
+    "category": "汤品",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 30,
+    "servings": 4,
+    "spicy": true,
+    "emoji": "🫘",
+    "tags": [
+      "印度",
+      "汤品",
+      "素食"
+    ],
+    "ingredients": [
+      {
+        "name": "黄扁豆",
+        "amount": "200g"
+      },
+      {
+        "name": "番茄(切丁)",
+        "amount": "2个"
+      },
+      {
+        "name": "洋葱",
+        "amount": "1个"
+      },
+      {
+        "name": "大蒜",
+        "amount": "3瓣"
+      },
+      {
+        "name": "生姜(磨泥)",
+        "amount": "1小勺"
+      },
+      {
+        "name": "姜黄粉",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "辣椒粉",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "印度混合香料",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "芥菜籽",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "孜然籽",
+        "amount": "1/2小勺"
+      },
+      {
+        "name": "干辣椒",
+        "amount": "2个"
+      },
+      {
+        "name": "植物油",
+        "amount": "3大勺"
+      },
+      {
+        "name": "香菜",
+        "amount": "适量"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "水",
+        "amount": "600ml"
+      }
+    ],
+    "tools": [
+      "煮锅",
+      "小锅",
+      "砧板"
+    ],
+    "steps": [
+      "扁豆洗净煮25分钟至软烂压成泥。加番茄和姜黄粉煮10分钟。",
+      "制作tadka：小锅加油，芥菜籽和孜然籽爆裂后加干辣椒、洋葱碎炒3分钟。",
+      "加蒜末和姜泥，撒辣椒粉和混合香料。",
+      "热香料油倒入扁豆汤中。",
+      "盛碗撒香菜。",
+      "配米饭或馕饼。"
+    ]
+  },
+  {
+    "id": "west_486",
+    "name": "希腊烤羊腿",
+    "nameEn": "Greek Roasted Leg of Lamb",
+    "cuisine": "希腊",
+    "category": "热菜",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 90,
+    "servings": 8,
+    "spicy": false,
+    "emoji": "🐑",
+    "tags": [
+      "希腊",
+      "烤肉",
+      "节日"
+    ],
+    "ingredients": [
+      {
+        "name": "羊腿(去骨)",
+        "amount": "2kg"
+      },
+      {
+        "name": "大蒜",
+        "amount": "8瓣"
+      },
+      {
+        "name": "新鲜迷迭香",
+        "amount": "4枝"
+      },
+      {
+        "name": "新鲜百里香",
+        "amount": "4枝"
+      },
+      {
+        "name": "新鲜欧芹",
+        "amount": "4枝"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": "4大勺"
+      },
+      {
+        "name": "特级初榨橄榄油",
+        "amount": "4大勺"
+      },
+      {
+        "name": "干牛至",
+        "amount": "1小勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "黑胡椒",
+        "amount": "适量"
+      },
+      {
+        "name": "土豆(切大块)",
+        "amount": "500g"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "大烤盘",
+      "砧板",
+      "菜刀",
+      "厨房线"
+    ],
+    "steps": [
+      "烤箱预热至180°C。大蒜切薄片。",
+      "迷迭香、百里香和欧芹叶切碎，与柠檬汁、橄榄油、干牛至、盐和黑胡椒混合成腌料。",
+      "羊腿上划深口，塞入蒜片。全身涂满腌料，冷藏腌制至少2小时。",
+      "烤盘底部铺土豆块，羊腿放在土豆上。",
+      "放入烤箱烤1.5-2小时至内部温度60°C(五分熟)。",
+      "取出休息20分钟后切片。"
+    ]
+  },
+  {
+    "id": "west_487",
+    "name": "西班牙海鲜饭(变体-墨鱼汁)",
+    "nameEn": "Arroz Negro",
+    "cuisine": "西班牙",
+    "category": "主食",
+    "difficulty": "困难",
+    "prepTime": 30,
+    "cookTime": 40,
+    "servings": 6,
+    "spicy": false,
+    "emoji": "🦑",
+    "tags": [
+      "西班牙",
+      "海鲜饭",
+      "墨鱼汁"
+    ],
+    "ingredients": [
+      {
+        "name": "西班牙圆粒米",
+        "amount": "400g"
+      },
+      {
+        "name": "墨鱼(切圈)",
+        "amount": "300g"
+      },
+      {
+        "name": "墨鱼汁(袋)",
+        "amount": "2袋"
+      },
+      {
+        "name": "洋葱",
+        "amount": "1个"
+      },
+      {
+        "name": "大蒜",
+        "amount": "4瓣"
+      },
+      {
+        "name": "甜椒(红)",
+        "amount": "1个"
+      },
+      {
+        "name": "番茄(切丁)",
+        "amount": "2个"
+      },
+      {
+        "name": "鱼高汤",
+        "amount": "800ml"
+      },
+      {
+        "name": "橄榄油",
+        "amount": "4大勺"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "柠檬(切角)",
+        "amount": "2个"
+      },
+      {
+        "name": "蒜蓉蛋黄酱(配食)",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "paella锅",
+      "砧板",
+      "菜刀"
+    ],
+    "steps": [
+      "墨鱼处理干净，保留墨汁囊。洋葱和大蒜切碎。",
+      "paella锅加油炒洋葱至透明，加大蒜和甜椒。",
+      "加入墨鱼圈炒3分钟，加入番茄丁炒2分钟。",
+      "加入米翻炒1分钟，倒入鱼高汤和墨鱼汁搅匀。",
+      "大火煮沸后转小火煮18-20分钟至米饭熟透，不要搅拌。",
+      "配柠檬角和蒜蓉蛋黄酱。"
+    ]
+  },
+  {
+    "id": "west_488",
+    "name": "西班牙冷汤(变体-杏仁)",
+    "nameEn": "Ajoblanco",
+    "cuisine": "西班牙",
+    "category": "汤品",
+    "difficulty": "简单",
+    "prepTime": 15,
+    "cookTime": 120,
+    "servings": 4,
+    "spicy": false,
+    "emoji": "🥣",
+    "tags": [
+      "西班牙",
+      "冷汤",
+      "杏仁"
+    ],
+    "ingredients": [
+      {
+        "name": "杏仁(去皮)",
+        "amount": "150g"
+      },
+      {
+        "name": "大蒜",
+        "amount": "1瓣"
+      },
+      {
+        "name": "特级初榨橄榄油",
+        "amount": "100ml"
+      },
+      {
+        "name": "白葡萄酒醋",
+        "amount": "2大勺"
+      },
+      {
+        "name": "水",
+        "amount": "200ml"
+      },
+      {
+        "name": "盐",
+        "amount": "适量"
+      },
+      {
+        "name": "配菜:葡萄(对半)",
+        "amount": "适量"
+      },
+      {
+        "name": "配菜:苹果丁",
+        "amount": "适量"
+      }
+    ],
+    "tools": [
+      "搅拌碗",
+      "料理机"
+    ],
+    "steps": [
+      "杏仁提前浸泡4小时或过夜。",
+      "杏仁、大蒜、橄榄油、醋和水放入料理机。",
+      "搅打至非常顺滑的奶油状。",
+      "加盐调味。",
+      "冷藏至少2小时。",
+      "盛碗配葡萄和苹果丁。"
+    ]
+  },
+  {
+    "id": "west_489",
+    "name": "美式芝士蛋糕(变体-纽约)",
+    "nameEn": "New York Cheesecake",
+    "cuisine": "美式",
+    "category": "甜品",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 60,
+    "servings": 10,
+    "spicy": false,
+    "emoji": "🍰",
+    "tags": [
+      "美式",
+      "芝士蛋糕",
+      "纽约"
+    ],
+    "ingredients": [
+      {
+        "name": "消化饼干碎",
+        "amount": "200g"
+      },
+      {
+        "name": "黄油(融化)",
+        "amount": "80g"
+      },
+      {
+        "name": "砂糖(饼底用)",
+        "amount": "2大勺"
+      },
+      {
+        "name": "奶油芝士(室温)",
+        "amount": "900g"
+      },
+      {
+        "name": "砂糖",
+        "amount": "200g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "5个"
+      },
+      {
+        "name": "酸奶油",
+        "amount": "200g"
+      },
+      {
+        "name": "香草精",
+        "amount": "2小勺"
+      },
+      {
+        "name": "柠檬汁",
+        "amount": "1大勺"
+      },
+      {
+        "name": "面粉",
+        "amount": "2大勺"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "9寸弹簧蛋糕模",
+      "搅拌碗",
+      "电动打蛋器",
+      "锡纸"
+    ],
+    "steps": [
+      "烤箱预热至175°C。饼干碎、融化黄油和糖混合压在蛋糕模底部，冷藏。",
+      "奶油芝士打至顺滑，加砂糖打至蓬松。",
+      "逐一加鸡蛋，每次充分混合。加入酸奶油、香草精、柠檬汁和面粉。",
+      "倒入模具。模具外包锡纸，放在深烤盘中加热水(水浴法)。",
+      "烤60-70分钟至边缘凝固、中心微微晃动。关火开缝冷却1小时。",
+      "冷藏至少4小时(最好过夜)。"
+    ]
+  },
+  {
+    "id": "west_490",
+    "name": "美式提拉米苏(变体-咖啡)",
+    "nameEn": "Tiramisu Classico",
+    "cuisine": "意式",
+    "category": "甜品",
+    "difficulty": "中等",
+    "prepTime": 20,
+    "cookTime": 0,
+    "servings": 8,
+    "spicy": false,
+    "emoji": "☕",
+    "tags": [
+      "意式",
+      "甜品",
+      "咖啡"
+    ],
+    "ingredients": [
+      {
+        "name": "马斯卡彭芝士",
+        "amount": "500g"
+      },
+      {
+        "name": "浓奶油",
+        "amount": "200ml"
+      },
+      {
+        "name": "蛋黄",
+        "amount": "4个"
+      },
+      {
+        "name": "砂糖",
+        "amount": "100g"
+      },
+      {
+        "name": "手指饼干",
+        "amount": "300g"
+      },
+      {
+        "name": "浓缩咖啡(放凉)",
+        "amount": "300ml"
+      },
+      {
+        "name": "可可粉",
+        "amount": "适量"
+      },
+      {
+        "name": "朗姆酒(可选)",
+        "amount": "1大勺"
+      }
+    ],
+    "tools": [
+      "搅拌碗",
+      "电动打蛋器",
+      "深盘"
+    ],
+    "steps": [
+      "蛋黄和砂糖打至发白浓稠。加入马斯卡彭芝士拌匀。",
+      "浓奶油打至六分发，拌入芝士混合物。",
+      "浓缩咖啡加朗姆酒(如有)。手指饼干快速蘸咖啡(不要泡太久)。",
+      "容器底部铺一层蘸咖啡的手指饼干，抹一层芝士奶油。",
+      "重复2-3层，顶层为芝士奶油。",
+      "冷藏至少4小时，食用前筛可可粉。"
+    ]
+  },
+  {
+    "id": "west_491",
+    "name": "美式肉桂卷",
+    "nameEn": "Cinnamon Rolls",
+    "cuisine": "美式",
+    "category": "烘焙",
+    "difficulty": "中等",
+    "prepTime": 30,
+    "cookTime": 25,
+    "servings": 12,
+    "spicy": false,
+    "emoji": "🍩",
+    "tags": [
+      "美式",
+      "面包",
+      "早餐"
+    ],
+    "ingredients": [
+      {
+        "name": "中筋面粉",
+        "amount": "500g"
+      },
+      {
+        "name": "砂糖",
+        "amount": "50g"
+      },
+      {
+        "name": "酵母(干)",
+        "amount": "7g"
+      },
+      {
+        "name": "盐",
+        "amount": "1小勺"
+      },
+      {
+        "name": "牛奶(温)",
+        "amount": "250ml"
+      },
+      {
+        "name": "黄油(融化)",
+        "amount": "60g"
+      },
+      {
+        "name": "鸡蛋",
+        "amount": "1个"
+      },
+      {
+        "name": "黄油(馅料用)",
+        "amount": "80g"
+      },
+      {
+        "name": "红糖",
+        "amount": "100g"
+      },
+      {
+        "name": "肉桂粉",
+        "amount": "2大勺"
+      },
+      {
+        "name": "奶油芝士(霜用)",
+        "amount": "120g"
+      },
+      {
+        "name": "黄油(霜用)",
+        "amount": "30g"
+      },
+      {
+        "name": "糖粉",
+        "amount": "150g"
+      },
+      {
+        "name": "香草精",
+        "amount": "1小勺"
+      },
+      {
+        "name": "盐(霜用)",
+        "amount": "一小撮"
+      }
+    ],
+    "tools": [
+      "烤箱",
+      "烤盘",
+      "搅拌碗",
+      "擀面杖",
+      "电动打蛋器"
+    ],
+    "steps": [
+      "面团材料混合揉成光滑面团，发酵1小时至两倍大。",
+      "擀成40x60cm的长方形，涂软化黄油，撒红糖和肉桂粉。",
+      "从长边紧密卷起，切成12个等份。",
+      "放在烤盘上，二次发酵30分钟。",
+      "烤箱175°C烤25-30分钟至金黄。",
+      "制作奶油芝士霜涂抹在温热的肉桂卷上。"
+    ]
+  }
+]
