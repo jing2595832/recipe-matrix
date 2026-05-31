@@ -81,17 +81,17 @@ export default {
                 const limit = Math.min(parseInt(url.searchParams.get('limit')) || 20, 50);
                 const siteId = url.searchParams.get('site_id');
 
-                let query = 'SELECT recipe_id, recipe_name, SUM(count) as total_views FROM (';
-                query += 'SELECT recipe_id, recipe_name, COUNT(*) as count FROM recipe_views';
+                let query, bindings;
                 if (siteId) {
-                    query += ' WHERE site_id = ?';
+                    query = `SELECT recipe_id, MAX(recipe_name) as recipe_name, COUNT(*) as total_views 
+                        FROM recipe_views WHERE site_id = ? 
+                        GROUP BY recipe_id ORDER BY total_views DESC LIMIT ?`;
+                    bindings = [siteId, limit];
+                } else {
+                    query = `SELECT recipe_id, MAX(recipe_name) as recipe_name, COUNT(*) as total_views 
+                        FROM recipe_views GROUP BY recipe_id ORDER BY total_views DESC LIMIT ?`;
+                    bindings = [limit];
                 }
-                query += ' GROUP BY recipe_id, recipe_name';
-                query += ' UNION ALL ';
-                query += 'SELECT recipe_id, NULL as recipe_name, views as count FROM recipe_stats';
-                query += ') combined GROUP BY recipe_id ORDER BY total_views DESC LIMIT ?';
-
-                const bindings = siteId ? [siteId, limit] : [limit];
                 const results = await env.DB.prepare(query).bind(...bindings).all();
 
                 return new Response(JSON.stringify({

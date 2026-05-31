@@ -243,7 +243,7 @@ const Dashboard = {
             const list = document.getElementById('topRecipesList');
             if (!list) return;
             if (!data.recipes || data.recipes.length === 0) {
-                list.innerHTML = '<li class="rank-empty">暂无数据，快来浏览菜谱吧！</li>';
+                list.innerHTML = '<li class="rank-empty">暂无数据，浏览菜谱后这里将显示排行榜 🍳</li>';
                 return;
             }
             list.innerHTML = data.recipes.map((r, i) => {
@@ -305,10 +305,12 @@ const Dashboard = {
         if (!bar) {
             bar = document.createElement('div');
             bar.id = 'bottomStatsBar';
-            const footer = document.querySelector('.site-footer') || document.querySelector('footer');
+            // 尝试插入到 footer 之前
+            const footer = document.querySelector('footer');
             if (footer) {
-                footer.insertBefore(bar, footer.firstChild);
+                footer.parentNode.insertBefore(bar, footer);
             } else {
+                // 如果没有 footer，追加到 body 末尾
                 document.body.appendChild(bar);
             }
         }
