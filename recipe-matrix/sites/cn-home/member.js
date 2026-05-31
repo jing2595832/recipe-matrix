@@ -36,14 +36,28 @@ const MemberSystem = {
         return users.find(u => u.id === userId) || null;
     },
 
+    // 带超时的fetch请求
+    async fetchWithTimeout(url, options, timeout = 5000) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
+        try {
+            const response = await fetch(url, { ...options, signal: controller.signal });
+            clearTimeout(timeoutId);
+            return response;
+        } catch (error) {
+            clearTimeout(timeoutId);
+            throw error;
+        }
+    },
+
     // 注册（通过Worker API）
     async register(username, email, password, nickname) {
         try {
-            const response = await fetch(`${this.API_BASE}/api/register`, {
+            const response = await this.fetchWithTimeout(`${this.API_BASE}/api/register`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, email, password, nickname })
-            });
+            }, 5000);
             const data = await response.json();
             if (data.success) {
                 localStorage.setItem('auth_token', data.token);
@@ -88,11 +102,11 @@ const MemberSystem = {
     // 登录（通过Worker API）
     async login(username, password) {
         try {
-            const response = await fetch(`${this.API_BASE}/api/login`, {
+            const response = await this.fetchWithTimeout(`${this.API_BASE}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ username, password })
-            });
+            }, 5000);
             const data = await response.json();
             if (data.success) {
                 localStorage.setItem('auth_token', data.token);

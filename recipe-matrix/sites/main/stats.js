@@ -79,6 +79,20 @@ const StatsSystem = {
         return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
     },
     
+    // 带超时的fetch
+    async fetchWithTimeout(url, options, timeout = 3000) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), timeout);
+        try {
+            const res = await fetch(url, { ...options, signal: controller.signal });
+            clearTimeout(timeoutId);
+            return res;
+        } catch (e) {
+            clearTimeout(timeoutId);
+            throw e;
+        }
+    },
+    
     // 记录页面访问
     async trackPageView() {
         try {
@@ -93,11 +107,11 @@ const StatsSystem = {
                 language: navigator.language
             };
             
-            await fetch(`${this.API_BASE}/api/page-view`, {
+            await this.fetchWithTimeout(`${this.API_BASE}/api/page-view`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
-            });
+            }, 3000);
         } catch (error) {
             console.log('Stats tracking error:', error);
         }
@@ -113,11 +127,11 @@ const StatsSystem = {
                 fingerprint: this.fingerprint
             };
             
-            await fetch(`${this.API_BASE}/api/recipe-view`, {
+            await this.fetchWithTimeout(`${this.API_BASE}/api/recipe-view`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
-            });
+            }, 3000);
         } catch (error) {
             console.log('Recipe view tracking error:', error);
         }

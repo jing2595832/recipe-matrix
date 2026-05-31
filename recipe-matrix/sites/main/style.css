@@ -820,3 +820,237 @@ body {
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
+
+/* 热门菜品统计区 */
+.hot-recipes-section {
+  margin-bottom: 32px;
+}
+
+.hot-recipes-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.hot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hot-header .section-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.view-all-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.view-all-link:hover {
+  color: var(--primary-dark);
+}
+
+.hot-recipes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.hot-recipe-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.hot-recipe-item:hover {
+  background: var(--primary-light);
+  transform: translateX(4px);
+}
+
+.hot-rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.hot-rank.gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; }
+.hot-rank.silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); color: #fff; }
+.hot-rank.bronze { background: linear-gradient(135deg, #CD7F32, #B87333); color: #fff; }
+.hot-rank.normal { background: var(--bg); color: var(--text-muted); }
+
+.hot-recipe-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.hot-recipe-name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hot-recipe-views {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.loading-placeholder {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 20px;
+  grid-column: 1 / -1;
+}
+
+/* 底部统计栏 */
+#bottomStatsBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 0.875rem;
+  z-index: 99;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.stats-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats-item .stats-icon {
+  font-size: 1.1rem;
+}
+
+.stats-item .stats-value {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .hot-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .hot-recipes-container {
+    grid-template-columns: 1fr;
+  }
+  
+  #bottomStatsBar {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+/* 受欢迎菜品TOP 10 排行区 */
+.top-recipes-section {
+  margin-bottom: 32px;
+}
+
+.top-recipes-card {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.top-header {
+  margin-bottom: 20px;
+}
+
+.top-header .section-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.top-recipes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.top-recipe-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+
+.top-recipe-item:hover {
+  background: var(--primary-light);
+  transform: translateX(4px);
+}
+
+.top-rank {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.top-rank.gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; }
+.top-rank.silver { background: linear-gradient(135deg, #C0C0C0, #A0A0A0); color: #fff; }
+.top-rank.bronze { background: linear-gradient(135deg, #CD7F32, #B87333); color: #fff; }
+.top-rank.normal { background: var(--bg-white); color: var(--text-muted); border: 1px solid #e0e0e0; }
+
+.top-name {
+  flex: 1;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-views {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .top-recipes-list {
+    grid-template-columns: 1fr;
+  }
+}
